@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".LoginScreen"
+        android:background="@drawable/regsc">
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="250dp"
+                android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="confirmInput"
+            android:text="Login"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAllCaps="false" tools:ignore="OnClick"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:id="@+id/fpswd"
+              android:text="Forgot Password"
+              android:textSize="20sp"
+              android:textStyle="bold"
+              android:textColor="@color/white"
+              android:layout_marginLeft="200sp"
+              android:layout_marginTop="70dp"/>
+
+<!--    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"-->
+<!--              android:id="@+id/reg"-->
+<!--            android:text="New here?Register"-->
+<!--            android:textSize="20sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_marginLeft="200dp"-->
+<!--            android:layout_marginTop="10dp"/>-->
+
+    <Button
+            android:id="@+id/logbt1"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="New here? Register "
+            android:background="@android:color/transparent"
+            android:textSize="15dp"
+            android:layout_marginLeft="150dp"
+            android:textStyle="bold"
+    />
+
+
+</LinearLayout>
