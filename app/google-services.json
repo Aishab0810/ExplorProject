@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "214118758083",
+    "firebase_url": "https://exploraholic-a1daf-default-rtdb.firebaseio.com",
+    "project_id": "exploraholic-a1daf",
+    "storage_bucket": "exploraholic-a1daf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214118758083:android:664ab11b3abbb684729476",
+        "android_client_info": {
+          "package_name": "com.example.exploraholic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214118758083-u8b3tav3kvm721trqpud8i9rfbkviq8f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.exploraholic",
+            "certificate_hash": "2aea44b4f311497ccb2416a65497017f9ff89cdd"
+          }
+        },
+        {
+          "client_id": "214118758083-10aherikm9emj8i2ttgpk48k4m88cdte.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_M1267zSIstT2GQLhmNVmsKIm_5HPakM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214118758083-10aherikm9emj8i2ttgpk48k4m88cdte.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

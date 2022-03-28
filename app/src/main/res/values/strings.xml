@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">ExploraHolic</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Registration">New here?
+        <b>Register</b>
+    </string>
+    <string name="fragment_hill_stations">Tiger Hill Lonavala Dist-60Km from pune</string>
+    <string name="fragment_dams">Khadakwasla Dam Dist-14km from pune</string>
+    <string name="fragment_forts">Rajgad Fort Dist-37.5km from pune</string>
 </resources>

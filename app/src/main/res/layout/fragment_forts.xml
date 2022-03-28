@@ -3,7 +3,8 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
-             tools:context=".Forts">
+             tools:context=".Forts"
+            android:background="@color/black">
 
     <!-- TODO: Update blank fragment layout -->
     <androidx.cardview.widget.CardView android:layout_width="380dp" android:layout_height="280dp"
@@ -18,7 +19,9 @@
                 android:id="@+id/ft1"
                 android:textSize="17sp"
                 android:textStyle="bold"
-                android:text="Rajgad Fort        Dist-37.5km from pune"/>
+                android:textColor="@color/black"
+                android:layout_marginLeft="10sp"
+                android:text="@string/fragment_forts"/>
 
         <ImageView android:layout_width="350dp" android:layout_height="250dp"
                    android:id="@+id/fi1"
@@ -39,6 +42,8 @@
                 android:layout_height="match_parent"
                 android:textSize="17sp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10sp"
                 android:text="Lohgad Fort         Dist-51km from pune"/>
 
         <ImageView android:layout_width="350dp" android:layout_height="250dp"

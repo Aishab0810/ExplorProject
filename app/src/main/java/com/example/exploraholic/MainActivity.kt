@@ -1,14 +1,13 @@
 package com.example.exploraholic
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import android.view.WindowManager
 import android.view.animation.AnimationUtils
-import android.view.inputmethod.InputBinding
+import androidx.appcompat.app.AppCompatActivity
 import com.example.exploraholic.databinding.ActivityMainBinding
 
 public const val SPLASH_TIME = 4000L
@@ -20,16 +19,6 @@ class MainActivity : AppCompatActivity() {
     fun isValidString(str: String): Boolean{
         return android.util.Patterns.EMAIL_ADDRESS.matcher(str).matches()
     }
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
-//
-//        val emails = arrayOf<String>("hello@gmail.com", "one.com")
-//
-//        emails.forEach {
-//            Log.d("MainActivity","is valid email $it => ${isValidString(it)}")
-//        }
-//    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
