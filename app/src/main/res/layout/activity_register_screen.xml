@@ -9,25 +9,14 @@
         tools:context=".RegisterScreen"
         android:background="@drawable/regsc">
 
-    <TextView
-            android:id="@+id/tv1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:textColor="@color/design_default_color_primary_variant"
-            android:textSize="38sp"
-            android:textStyle="bold"
-            android:text="Register"
-            style="@style/TextAppearance.MaterialComponents.Caption"/>
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:textColor="@color/purple_700"
-            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
             android:textStyle="bold"
-            android:layout_below="@id/tv1"
             android:text="Create a new account"
             style="@style/TextAppearance.MaterialComponents.Caption"/>
 
@@ -92,34 +81,11 @@
             android:layout_marginTop="80dp"
             android:textAllCaps="false" tools:ignore="OnClick"/>
 
-    <!--        <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content"-->
-    <!--                  android:textColor="@color/white"-->
-    <!--                  android:text="Remember me"-->
-    <!--                  android:textStyle="bold"-->
-    <!--                  android:textSize="20sp"/>-->
 
-    <!--        <TextView-->
-    <!--                android:layout_width="wrap_content" android:layout_height="wrap_content"-->
-    <!--                  android:id="@+id/fpswd"-->
-    <!--                  android:text="Forgot Password"-->
-    <!--                  android:textSize="20sp"-->
-    <!--                  android:textStyle="bold"-->
-    <!--                  android:textColor="@color/white"-->
-    <!--                  android:layout_marginLeft="215sp"-->
-    <!--                  android:layout_marginTop="10dp"/>-->
-
-    <!--    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"-->
-    <!--              android:id="@+id/reg"-->
-    <!--            android:text="New here?Register"-->
-    <!--            android:textSize="20sp"-->
-    <!--            android:textStyle="bold"-->
-    <!--            android:textColor="@color/white"-->
-    <!--            android:layout_marginLeft="200dp"-->
-    <!--            android:layout_marginTop="10dp"/>-->
 
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:id="@+id/reg"
-              android:text="Already have account? Login"
+              android:text="@string/Login"
               android:layout_marginTop="120sp"
               android:layout_alignParentBottom="true"
               android:layout_centerHorizontal="true"

@@ -11,24 +11,20 @@
     <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar1"
             android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
-             android:background="@color/black"
-            app:title="Exploraholic"
-            app:titleTextColor="@color/white"
-            app:titleMarginStart="150dp"
+            android:background="@color/black"
     />
 
     <com.google.android.material.tabs.TabLayout
             android:id="@+id/tablayout2"
             android:layout_width="match_parent" android:layout_height="wrap_content"
-    android:background="@color/teal_200"
-    app:tabTextColor="@color/black"
-    app:tabIndicatorColor="@color/black"
-    app:tabIndicatorAnimationMode="elastic"/>
+            android:background="@color/purple_200"
+            app:tabTextColor="@color/black"
+            app:tabIndicatorColor="@color/black"
+            app:tabIndicatorAnimationMode="elastic"/>
 
     <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewpager2"
             android:layout_width="match_parent" android:layout_height="wrap_content"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
     />
 
 </LinearLayout>

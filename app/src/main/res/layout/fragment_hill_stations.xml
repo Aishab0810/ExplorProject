@@ -3,36 +3,29 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
-             tools:context=".HillStations"
-            android:background="@color/black">
+             tools:context="Hillstations">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.cardview.widget.CardView
-            android:id="@+id/cv1"
-            android:layout_width="380dp"
-            android:layout_height="280dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            app:cardCornerRadius="4dp">
+    <androidx.cardview.widget.CardView android:layout_width="380dp" android:layout_height="280dp"
+                                       android:layout_marginTop="30dp"
+                                       android:layout_marginLeft="15dp"
+                                       android:layout_marginRight="15dp"
+                                       app:cardCornerRadius="4dp">
 
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/ht1"
+                android:id="@+id/pt1"
                 android:textSize="17sp"
                 android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_marginLeft="10sp"
-                android:text="@string/fragment_hill_stations"/>
+                android:text=" Pushups "/>
 
-    <ImageView android:layout_width="350dp" android:layout_height="250dp"
-                android:id="@+id/hi1"
-                android:clickable="true"
-                android:src="@drawable/tighill"
-                android:layout_marginTop="40dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"/>
+        <ImageView android:layout_width="350dp" android:layout_height="250dp"
+                   android:id="@+id/fi1"
+                   android:src="@drawable/mhill"
+                   android:layout_marginTop="40dp"
+                   android:layout_marginLeft="15dp"
+                   android:layout_marginRight="15dp"/>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView android:layout_width="380dp" android:layout_height="280dp"
@@ -46,13 +39,11 @@
                 android:layout_height="match_parent"
                 android:textSize="17sp"
                 android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_marginLeft="10sp"
-                android:text="Mahabaleshwar         Dist-120Km from pune"/>
+                android:text="Inclined Pushupp"/>
 
         <ImageView android:layout_width="350dp" android:layout_height="250dp"
-                   android:id="@+id/hill2"
-                   android:src="@drawable/mhill"
+                   android:id="@+id/pup2"
+                   android:src="@drawable/tighill"
                    android:layout_marginTop="40dp"
                    android:layout_marginLeft="15dp"
                    android:layout_marginRight="15dp"/>

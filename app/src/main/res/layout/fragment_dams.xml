@@ -3,31 +3,26 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
-             tools:context=".Dams"
-            android:background="@color/black">
+             tools:context="Dams">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.cardview.widget.CardView
-            android:layout_width="380dp"
-            android:layout_height="280dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            app:cardCornerRadius="4dp">
+    <androidx.cardview.widget.CardView android:layout_width="380dp" android:layout_height="280dp"
+                                       android:layout_marginTop="30dp"
+                                       android:layout_marginLeft="15dp"
+                                       android:layout_marginRight="15dp"
+                                       app:cardCornerRadius="4dp">
 
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/dt1"
+                android:id="@+id/pullt1"
                 android:textSize="17sp"
                 android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_marginLeft="10sp"
-                android:text="@string/fragment_dams"/>
+                android:text=" Grip Pullup"/>
 
         <ImageView android:layout_width="350dp" android:layout_height="250dp"
-                   android:id="@+id/di1"
-                   android:src="@drawable/kdam"
+                   android:id="@+id/pulli1"
+                   android:src="@drawable/mdam"
                    android:layout_marginTop="40dp"
                    android:layout_marginLeft="15dp"
                    android:layout_marginRight="15dp"/>
@@ -37,20 +32,18 @@
                                        android:layout_marginTop="320dp"
                                        android:layout_marginLeft="15dp"
                                        android:layout_marginRight="15dp"
-                                        app:cardCornerRadius="4dp">
+                                       app:cardCornerRadius="4dp">
 
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textSize="17sp"
                 android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_marginLeft="10sp"
-                android:text="Mulashi Dam         Dist-40.05km from pune"/>
+                android:text=" Arched back Pullup "/>
 
         <ImageView android:layout_width="350dp" android:layout_height="250dp"
                    android:id="@+id/hill2"
-                   android:src="@drawable/mdam"
+                   android:src="@drawable/kdam"
                    android:layout_marginTop="40dp"
                    android:layout_marginLeft="15dp"
                    android:layout_marginRight="15dp"/>

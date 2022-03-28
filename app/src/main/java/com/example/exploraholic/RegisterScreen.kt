@@ -1,5 +1,6 @@
 package com.example.exploraholic
 
+
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
@@ -29,39 +30,30 @@ class RegisterScreen() : AppCompatActivity() {
     private var password11=""
     private var confpswd11=""
 
-//    private var email: TextInputLayout? = null
-//    private var password: TextInputLayout? = null
-//    private var confirmpassword: TextInputLayout? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-    //configure actionbar, enable back button
-//    actionBar = supportActionBar!!
-//    actionBar.title ="Registration"
-//    actionBar.setDisplayHomeAsUpEnabled(true)
-//    actionBar.setDisplayShowHomeEnabled(true)
 
-    //configure progress dialog
-    progressDialog = ProgressDialog(this)
-    progressDialog.setTitle("Please wait")
-    progressDialog.setMessage("Creating account...")
-    progressDialog.setCanceledOnTouchOutside(false)
 
-    //init firebaseAuth
-    firebaseAuth = FirebaseAuth.getInstance()
+        //configure progress dialog
+        progressDialog = ProgressDialog(this)
+        progressDialog.setTitle("Please wait")
+        progressDialog.setMessage("Creating account...")
+        progressDialog.setCanceledOnTouchOutside(false)
 
-    //handle click, begin register
-    binding.regbtn.setOnClickListener{
-        //validate data
-        validateData()
-    }
+        //init firebaseAuth
+        firebaseAuth = FirebaseAuth.getInstance()
 
-//        // Referencing email and password
-//        email = findViewById(R.id.email)
-//        password = findViewById(R.id.password)
-//        confirmpassword = findViewById(R.id.cnfmpswd)
+        //handle click, begin register
+        binding.regbtn.setOnClickListener{
+            //validate data
+            validateData()
+        }
+
+
     }
 
     private fun validateData() {
@@ -109,8 +101,8 @@ class RegisterScreen() : AppCompatActivity() {
                 val email = firebaseUser!!.email
                 Toast.makeText(this,"Account created with $email",Toast.LENGTH_SHORT).show()
                 //open profile
-                startActivity(Intent(this,Profile::class.java))
-                finish()
+//                startActivity(Intent(this,Profile::class.java))
+//                finish()
             }
             .addOnFailureListener{ e->
                 //login failed
@@ -124,6 +116,45 @@ class RegisterScreen() : AppCompatActivity() {
         return super.onSupportNavigateUp()
     }
 
+
+
+    companion object {
+        // defining our own password pattern
+        private val PASSWORD_PATTERN = Pattern.compile(
+            "^" +
+                    "(?=.*[@#$%^&+=])" +  // at least 1 special character
+                    "(?=\\S+$)" +  // no white spaces
+                    ".{4,}" +  // at least 4 characters
+                    "$"
+        )
+    }
+}
+
+
+//import android.content.Intent
+//import android.os.Bundle
+//import android.util.Patterns
+//import android.view.View
+//import android.widget.Toast
+//import androidx.appcompat.app.AppCompatActivity
+////import com.example.myapp.R
+//import com.google.android.material.textfield.TextInputLayout
+//import java.util.regex.Pattern
+//
+//class RegisterScreen() : AppCompatActivity() {
+//    private var email: TextInputLayout? = null
+//    private var password: TextInputLayout? = null
+//    private var confirmpassword: TextInputLayout? = null
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.activity_register_screen)
+//
+//        // Referencing email and password
+//        email = findViewById(R.id.email)
+//        password = findViewById(R.id.password)
+//        confirmpassword = findViewById(R.id.cnfmpswd)
+//    }
+//
 //    private fun validateEmail(): Boolean {
 //
 //        // Extract input from EditText
@@ -141,7 +172,7 @@ class RegisterScreen() : AppCompatActivity() {
 //            return true
 //        }
 //    }
-
+//
 //    private fun validatePassword(): Boolean {
 //        val passwordInput = password!!.editText!!.text.toString().trim { it <= ' ' }
 //        // if password field is empty
@@ -157,7 +188,7 @@ class RegisterScreen() : AppCompatActivity() {
 //            return true
 //        }
 //    }
-
+//
 //    private fun validateConfirmPassword(): Boolean {
 //        val passwordInput = confirmpassword!!.editText!!.text.toString().trim { it <= ' ' }
 //        // if password field is empty
@@ -173,7 +204,7 @@ class RegisterScreen() : AppCompatActivity() {
 //            return true
 //        }
 //    }
-
+//
 //    fun confirmInput(v: View?) {
 //        if (!validateEmail() or !validatePassword() or !validateConfirmPassword()) {
 //            return
@@ -186,18 +217,18 @@ class RegisterScreen() : AppCompatActivity() {
 //        input += "Password: " + password!!.editText!!.text.toString()
 //        input += "Confirm Password: " + confirmpassword!!.editText!!.text.toString()
 //        Toast.makeText(this, input, Toast.LENGTH_SHORT).show()
-//        val intent= Intent(this,HomePage::class.java)
-//        startActivity(intent)
+////        val intent= Intent(this,HomePage::class.java)
+////        startActivity(intent)
 //    }
-
-    companion object {
-        // defining our own password pattern
-        private val PASSWORD_PATTERN = Pattern.compile(
-            "^" +
-                    "(?=.*[@#$%^&+=])" +  // at least 1 special character
-                    "(?=\\S+$)" +  // no white spaces
-                    ".{4,}" +  // at least 4 characters
-                    "$"
-        )
-    }
-}
+//
+//    companion object {
+//        // defining our own password pattern
+//        private val PASSWORD_PATTERN = Pattern.compile(
+//            "^" +
+//                    "(?=.*[@#$%^&+=])" +  // at least 1 special character
+//                    "(?=\\S+$)" +  // no white spaces
+//                    ".{4,}" +  // at least 4 characters
+//                    "$"
+//        )
+//    }
+//}

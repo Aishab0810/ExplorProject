@@ -14,7 +14,7 @@ class HomePage : AppCompatActivity() {
     private lateinit var tabLayout: TabLayout
     private lateinit var toolbar: androidx.appcompat.widget.Toolbar  //since type mismatched on line 20
     private lateinit var appPagerAdapter: AppPagerAdapter
-    private val titles = arrayListOf("Hillstations", "Dams", "Forts")  //for multiple list we require titles
+    private val titles = arrayListOf("Hillstation ", "Fort ", "Dam ")  //for multiple list we require titles
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
@@ -37,11 +37,11 @@ class HomePage : AppCompatActivity() {
 
         override fun createFragment(position: Int): Fragment {
             return when (position) {
-                0 -> HillStations()
-                1 -> Dams()
-                2 -> Forts()
+                0 -> Hillstations()
+                1 -> Forts()
+                2 -> Dams()
 
-                else -> HillStations()
+                else -> Hillstations()
             }
         }
 

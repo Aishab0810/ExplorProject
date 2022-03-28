@@ -7,4 +7,6 @@
     <string name="fragment_hill_stations">Tiger Hill Lonavala Dist-60Km from pune</string>
     <string name="fragment_dams">Khadakwasla Dam Dist-14km from pune</string>
     <string name="fragment_forts">Rajgad Fort Dist-37.5km from pune</string>
+    <string name="Register">New here? Register</string>
+    <string name="Login">Already have account? Login</string>
 </resources>

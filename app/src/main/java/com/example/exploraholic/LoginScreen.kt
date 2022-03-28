@@ -1,28 +1,15 @@
 package com.example.exploraholic
 
+//import androidx.appcompat.app.ActionBar
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.text.TextUtils
 import android.util.Patterns
-import android.view.View
-import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
-//import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
-import com.example.exploraholic.R.id.reg
 import com.example.exploraholic.databinding.ActivityLoginScreenBinding
-import com.example.exploraholic.databinding.ActivityMainBinding
-//import com.example.myapp.R
-import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 import java.util.regex.Pattern
 
 class LoginScreen() : AppCompatActivity() {
@@ -173,7 +160,7 @@ class LoginScreen() : AppCompatActivity() {
         val firebaseUser = firebaseAuth.currentUser
         if (firebaseUser != null){
             //user is already logged in
-            startActivity(Intent(this, ContactsContract.Profile::class.java))
+            startActivity(Intent(this, Profile::class.java))
             finish()
         }
     }
