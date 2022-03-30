@@ -1,18 +1,16 @@
 package com.example.exploraholic
 
 
+//import androidx.appcompat.app.ActionBar
+//import com.example.myapp.R
 import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Patterns
-import android.view.View
 import android.widget.Toast
-//import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.exploraholic.databinding.ActivityRegisterScreenBinding
-//import com.example.myapp.R
-import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import java.util.regex.Pattern
 
@@ -46,6 +44,11 @@ class RegisterScreen() : AppCompatActivity() {
 
         //init firebaseAuth
         firebaseAuth = FirebaseAuth.getInstance()
+
+        //handle click, Open registerScreen
+        binding.reg1.setOnClickListener{
+            startActivity(Intent(this,LoginScreen::class.java))
+        }
 
         //handle click, begin register
         binding.regbtn.setOnClickListener{
@@ -100,9 +103,9 @@ class RegisterScreen() : AppCompatActivity() {
                 val firebaseUser = firebaseAuth.currentUser
                 val email = firebaseUser!!.email
                 Toast.makeText(this,"Account created with $email",Toast.LENGTH_SHORT).show()
-                //open profile
-//                startActivity(Intent(this,Profile::class.java))
-//                finish()
+                //open Login
+                startActivity(Intent(this,LoginScreen::class.java))
+                finish()
             }
             .addOnFailureListener{ e->
                 //login failed
