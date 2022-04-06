@@ -7,7 +7,8 @@
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             tools:context="Dams"
             app:cardCornerRadius="10dp"
             app:cardElevation="3dp"
@@ -87,7 +88,8 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:textColor="@color/black"
-                    android:text="Mulshi is the name of a major dam on the Mula river. It is located in the Mulshi taluka administrative division of the Pune.Water from the dam is used for irrigation as well as for producing electricity at the Bhira hydroelectric power plant."/>      </LinearLayout>
+                    android:text="Mulshi is the name of a major dam on the Mula river. It is located in the Mulshi taluka administrative division of the Pune.Water from the dam is used for irrigation as well as for producing electricity at the Bhira hydroelectric power plant."/>
+        </LinearLayout>
 
         <!--    <androidx.cardview.widget.CardView -->
         <!--            android:layout_width="match_parent" -->

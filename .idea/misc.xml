@@ -3,18 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/activity_home_page.xml" value="0.18" />
+        <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/activity_city.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/activity_forgot_password.xml" value="0.18" />
+        <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/activity_home_page.xml" value="0.22" />
+        <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/activity_info.xml" value="0.15" />
         <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/activity_login_screen.xml" value="0.22" />
         <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/activity_main.xml" value="0.19157608695652173" />
+        <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/activity_maps.xml" value="0.22" />
         <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/activity_profile.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/activity_pune.xml" value="0.13043478260869565" />
         <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/activity_register_screen.xml" value="0.18" />
         <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/fragment_dams.xml" value="0.1" />
         <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/fragment_forgot_pswd.xml" value="0.1" />
         <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/fragment_forts.xml" value="0.1" />
         <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/fragment_fst_hill_stn.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/fragment_hill_stations.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/fragment_home.xml" value="0.18206521739130435" />
+        <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/fragment_map.xml" value="0.18" />
+        <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/fragment_profile.xml" value="0.18206521739130435" />
+        <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/fragment_route_bike.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/fragment_search.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/fragment_settings.xml" value="0.18206521739130435" />
         <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/main_activity.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/layout/main_fragment.xml" value="0.2" />
+        <entry key="..\:/Users/Admin/ExploraHolic/ExploraHolic/app/src/main/res/menu/menu.xml" value="0.21875" />
       </map>
     </option>
   </component>

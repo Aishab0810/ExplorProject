@@ -80,6 +80,17 @@
             android:layout_marginTop="10dp"
             android:textAllCaps="false" tools:ignore="OnClick"/>
 
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/fpswd"
+              android:text="Forgot Password?"
+              android:layout_below="@+id/loginbtn"
+              android:layout_marginLeft="185sp"
+              android:textColor="@color/white"
+              android:padding="5dp"
+              android:textSize="18sp"
+              android:textStyle="bold"
+              style="@style/TextAppearance.MaterialComponents.Caption"/>
 
 
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"

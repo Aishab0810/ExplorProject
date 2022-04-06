@@ -12,6 +12,9 @@ import com.example.exploraholic.databinding.ActivityLoginScreenBinding
 import com.google.firebase.auth.FirebaseAuth
 import java.util.regex.Pattern
 
+/**
+ * Login screen used to login the user into travel app
+ */
 class LoginScreen() : AppCompatActivity() {
 
     //viewBinding
@@ -54,6 +57,10 @@ class LoginScreen() : AppCompatActivity() {
         //handle click, Open registerScreen
         binding.reg.setOnClickListener{
             startActivity(Intent(this,RegisterScreen::class.java))
+        }
+
+        binding.fpswd.setOnClickListener{
+            startActivity(Intent(this,ForgotPassword::class.java))
         }
 
         //handle click, begin login
@@ -144,8 +151,9 @@ class LoginScreen() : AppCompatActivity() {
                 val email = firebaseUser!!.email
                 Toast.makeText(this,"Logged in as $email",Toast.LENGTH_SHORT).show()
                 //open Homepage
-                startActivity(Intent(this,HomePage::class.java))
+                startActivity(Intent(this,City::class.java))
                 finish()
+
             }
             .addOnFailureListener{ e->
                 //login failed
@@ -158,11 +166,7 @@ class LoginScreen() : AppCompatActivity() {
         //if user is already logged in then go to profile
         //get current user
         val firebaseUser = firebaseAuth.currentUser
-        if (firebaseUser != null){
-            //user is already logged in
-            startActivity(Intent(this, Profile::class.java))
-            finish()
-        }
+
     }
 
 //    private fun validateEmail(): Boolean {
