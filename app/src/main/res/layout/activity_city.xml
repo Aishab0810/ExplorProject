@@ -9,6 +9,12 @@
         android:padding="10sp"
 android:background="@drawable/regsc">
 
+    <fragment android:id="@+id/myMap"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+
     <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -37,6 +43,7 @@ android:background="@drawable/regsc">
             android:src="@drawable/person"
             android:layout_marginLeft="340dp"
             android:layout_marginTop="10dp"/>
+
 
     <Button android:id="@+id/b1"
             android:layout_width="match_parent"

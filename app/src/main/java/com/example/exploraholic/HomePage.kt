@@ -59,11 +59,11 @@ class HomePage : AppCompatActivity() {
 
         override fun createFragment(position: Int): Fragment {
             return when (position) {
-                0 -> Hillstations()
+                0 -> HillStations()
                 1 -> Forts()
                 2 -> Dams()
 
-                else -> Hillstations()
+                else -> HillStations()
             }
         }
 
