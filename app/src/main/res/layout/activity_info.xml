@@ -14,38 +14,58 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Info"
-        android:padding="10dp">
+        tools:context=".Info">
 
-    <TextView android:id="@+id/pune_id"
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar1"
             android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-            android:text="Pune"
-    android:textSize="40sp"
-    android:gravity="center"
-    android:textColor="@color/black"/>
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/purple_700"
+            app:title="@string/app_name"
+            app:titleTextColor="@color/white"
+    />
+
+    <TextView   android:id="@+id/pune_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pune"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textColor="@color/purple_700"
+                android:layout_marginTop="50sp"/>
+
+    <ImageView
+            android:id="@+id/homee"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/homebtn"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="320dp"/>
 
     <ImageView
             android:id="@+id/log_out"
-            android:layout_width="43dp"
-            android:layout_height="35dp"
-            android:src="@drawable/person"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_logout_24"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="340dp"/>
+            android:layout_marginLeft="370dp"/>
 
     <ImageView android:id="@+id/iv1"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:src="@drawable/wada"/>
+               android:src="@drawable/wada"
+               android:layout_marginTop="50dp"/>
 
     <TextView android:id="@+id/infm"
-            android:layout_width="match_parent"
+              android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:text="Pune is the second largest city of Maharashtra state, India and is surrounded by the Sahyadri Mountain range. It occupied an important place during the Maratha Empire between 1674 and 1881. Hence, it homes numerous forts and wadas highlighting typical Maratha architecture.Forts are one of the main attractions including Lohagad and Visapur Forts. It also has rich cultural and spiritual history with many temples and ashrams spread across the city. In additional to local adventure and history junkies, Pune also attracts many international tourist because of Osho International Meditation Resort that is located in heart of Pune at Koregaon Park."
               android:textSize="20sp"
-              android:layout_below="@+id/iv1"
+              android:layout_marginTop="330dp"
               android:gravity="center"
-              android:background="@color/white"
+              android:textStyle="bold"
+              android:background="@drawable/regsc"
               android:textColor="@color/black"/>
 </RelativeLayout>
 </ScrollView>

@@ -38,19 +38,18 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:text=" Lohgad Fort "/>
+                    android:textColor="#184695"
+                    android:text="@string/Lohgad"/>
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/lt2"
                     android:textSize="16sp"
-                    android:textStyle="bold"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:text="Lohagad is one of the many hill forts of Maharashtra state in India. Situated close to the hill station Lonavala and 52 km northwest of Pune, Lohagad rises to an elevation of 1,033 m above sea level. The fort is connected to the neighboring Visapur fort by a small range."/>
+                    android:text="@string/Lohgad_info"/>
         </LinearLayout>
 
         <LinearLayout
@@ -63,7 +62,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:id="@+id/ri1"
-                    android:src="@drawable/tighill"
+                    android:src="@drawable/rfort"
                     android:scaleType="centerCrop"/>
             <TextView
                     android:layout_width="match_parent"
@@ -71,23 +70,22 @@
                     android:id="@+id/rt1"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="#184695"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:textAlignment="center"
-                    android:text="Rajgad Fort"/>
+                    android:text="@string/Rajgad"/>
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/rt2"
                     android:textSize="16sp"
-                    android:textStyle="bold"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:textColor="@color/black"
-                    android:text="Rajgad is a hill fort, Formerly known as Murumdev. The fort was the capital of the Maratha Empire under the rule of Chatrapati Shivaji Maharaj for almost 26 years, after which the capital was moved to the Raigad Fort."/>
+                    android:text="@string/Rajgad_info"/>
         </LinearLayout>
 
         <!--    <androidx.cardview.widget.CardView -->

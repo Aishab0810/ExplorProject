@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"            xmlns:tools="http://schemas.android.com/tools"            xmlns:app="http://schemas.android.com/apk/res-auto"            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true"
-            android:background="@drawable/regsc">
+            android:background="@drawable/regsc"
+            android:id="@+id/layoutHill">
 
     <androidx.cardview.widget.CardView
             xmlns:android="http://schemas.android.com/apk/res/android"
@@ -40,19 +41,27 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:text=" Mahabaleshwar "/>
+                    android:textColor="#184695"
+                    android:text="@string/mahabaleshwar"/>
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/ht2"
                     android:textSize="16sp"
-                    android:textStyle="bold"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:text=" Mahabaleshwar is a hill station in India's forested Western Ghats range, south of Mumbai. It features several elevated viewing points.West of here is centuries-old Pratapgad Fort, perched atop a mountain spur."/>
+                    android:text="@string/mahabaleshwar_info"/>
+
+<!--            <ImageButton android:layout_width="40dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:id="@+id/mbtn"-->
+<!--                    android:layout_marginTop="-135dp"-->
+<!--                    android:layout_marginLeft="330dp"-->
+<!--                    android:src="@drawable/next"-->
+<!--                         android:background="@color/purple_700"-->
+<!--            />-->
         </LinearLayout>
 
         <LinearLayout
@@ -73,51 +82,33 @@
                     android:id="@+id/tt1"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="#184695"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:textAlignment="center"
-                    android:text=" Tiger Hill Lonavala "/>
+                    android:text="@string/Tiger_hill"/>
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/tt2"
                     android:textSize="16sp"
-                    android:textStyle="bold"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:textColor="@color/black"
-                    android:text="The Tiger point derives its name from its resemblance to the shape of a leaping tiger. It offers spectacular views of forests, lush greenery, waterfalls and lakes around. The sunrise and sunset views from here are mesmerizing."/>
+                    android:text="@string/Tiger_hill_info"/>
+
+<!--            <ImageButton android:layout_width="40dp"-->
+<!--                         android:layout_height="40dp"-->
+<!--                         android:id="@+id/tbtn"-->
+<!--                         android:layout_marginTop="-135dp"-->
+<!--                         android:layout_marginLeft="330dp"-->
+<!--                         android:src="@drawable/next"-->
+<!--                         android:background="@color/purple_700"-->
+<!--            />-->
+
         </LinearLayout>
-
-        <!--    <androidx.cardview.widget.CardView -->
-        <!--            android:layout_width="match_parent" -->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginTop="320dp"-->
-        <!--            android:layout_marginLeft="15dp"-->
-        <!--            android:layout_marginRight="15dp"-->
-        <!--            app:cardCornerRadius="4dp"-->
-        <!--            android:clickable="true">-->
-
-        <!--        <TextView-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="match_parent"-->
-        <!--                android:textSize="20sp"-->
-        <!--                android:textStyle="bold"-->
-        <!--                android:textColor="@color/black"-->
-        <!--                android:textAlignment="center"-->
-        <!--                android:text="Tiger Hill Lonavala"/>-->
-
-        <!--        <ImageView android:layout_width="match_parent" android:layout_height="wrap_content"-->
-        <!--                   android:id="@+id/pup2"-->
-        <!--                   android:src="@drawable/tighill"-->
-        <!--                   android:layout_marginTop="40dp"-->
-        <!--                   android:layout_marginLeft="15dp"-->
-        <!--                   android:layout_marginRight="15dp"/>-->
-        <!--        -->
-        <!--    </androidx.cardview.widget.CardView>-->
 
     </androidx.cardview.widget.CardView>
 </ScrollView>

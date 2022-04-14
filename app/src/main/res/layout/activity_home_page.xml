@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"            xmlns:tools="http://schemas.android.com/tools"            xmlns:app="http://schemas.android.com/apk/res-auto"            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fillViewport="true">
 
-<LinearLayout
+<LinearLayout android:id="@+id/homelayout"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,16 +13,24 @@
             android:id="@+id/toolbar1"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/white"
+            android:background="@color/purple_700"
             app:title="@string/app_name"
-            app:titleTextColor="@color/black"
+            app:titleTextColor="@color/white"
     >
+
+        <ImageView
+                android:id="@+id/homeimg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/homebtn"
+                android:layout_marginLeft="200dp"/>
+
         <ImageView
                 android:id="@+id/log_out"
-                android:layout_width="43dp"
-                android:layout_height="35dp"
-                android:src="@drawable/person"
-        android:layout_marginLeft="210dp"/>
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_logout_24"
+        android:layout_marginLeft="20dp"/>
 
 <!--        <ImageView-->
 <!--                android:id="@+id/mapimg"-->
@@ -51,10 +56,17 @@
             app:tabIndicatorColor="@color/black"
             app:tabIndicatorAnimationMode="elastic"/>
 
+    <ScrollView
+            android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
     <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewpager2"
             android:layout_width="match_parent" android:layout_height="wrap_content"
     />
+
+    </ScrollView>
     
 <!--    <fragment-->
 <!--            android:id="@+id/container_fragment"-->
@@ -73,4 +85,3 @@
 <!--            app:labelVisibilityMode="selected"/>-->
 
 </LinearLayout>
-</ScrollView>

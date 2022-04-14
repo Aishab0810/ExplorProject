@@ -4,12 +4,45 @@
     <string name="Registration">New here?
         <b>Register</b>
     </string>
-    <string name="fragment_hill_stations">Tiger Hill Lonavala Dist-60Km from pune</string>
-    <string name="fragment_dams">Khadakwasla Dam Dist-14km from pune</string>
-    <string name="fragment_forts">Rajgad Fort Dist-37.5km from pune</string>
+    <string name="Tiger_hill">Tiger Hill Lonavala Dist-60Km from pune</string>
+    <string name="Tiger_hill_info">The Tiger point derives its name from its resemblance to the shape of a leaping
+        tiger. It offers spectacular views of forests, lush greenery, waterfalls and lakes around. The sunrise and
+        sunset views from here are mesmerizing.
+    </string>
+
+    <string name="mahabaleshwar">Mahabaleshwar Dist-120km from pune</string>
+    <string name="mahabaleshwar_info">Mahabaleshwar is a hill station in Indias forested Western Ghats range, south of
+        Mumbai. It features several elevated viewing points.West of here is centuries-old Pratapgad Fort, perched atop a
+        mountain spur
+    </string>
+
+    <string name="Khadakwasla">Khadakwasla Dam Dist-14km from pune</string>
+    <string name="Khadakwasla_info">Khadakwasla Dam is a dam on the Mutha River 21 km from the centre of the city of
+        Pune in Maharashtra, India. The dam created a reservoir known as Khadakwasla Lake which is the main source of
+        water for Pune and its suburbs.
+    </string>
+
+    <string name="Mulashi">Mulashi Dam Dist-40.5km from pune</string>
+    <string name="Mulashi_info">Mulshi is the name of a major dam on the Mula river. It is located in the Mulshi taluka
+        administrative division of the Pune.Water from the dam is used for irrigation as well as for producing
+        electricity at the Bhira hydroelectric power plant.
+    </string>
+
+    <string name="Rajgad">Rajgad Fort Dist-143km from pune</string>
+    <string name="Rajgad_info">Rajgad is a hill fort, Formerly known as Murumdev. The fort was the capital of the
+        Maratha Empire under the rule of Chatrapati Shivaji Maharaj for almost 26 years, after which the capital was
+        moved to the Raigad Fort.
+    </string>
+
+    <string name="Lohgad">Lohgad Fort Dist-37.5km from pune</string>
+    <string name="Lohgad_info">Lohagad is one of the many hill forts of Maharashtra state in India. Situated close to
+        the hill station Lonavala and 52 km northwest of Pune, Lohagad rises to an elevation of 1,033 m above sea level.
+        The fort is connected to the neighboring Visapur fort by a small range.
+    </string>
+
     <string name="Register">New here? Register</string>
     <string name="Login">Already have account? Login</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">MapsActivity</string>
 </resources>

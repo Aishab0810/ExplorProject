@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <RelativeLayout
         android:id="@+id/cityid"
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -7,8 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".City"
-        android:padding="10sp"
-android:background="@drawable/regsc">
+        android:background="@drawable/regsc">
 
 <!--    <fragment android:id="@+id/myMap"-->
 <!--              android:layout_width="match_parent"-->
@@ -20,54 +21,71 @@ android:background="@drawable/regsc">
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/white"
+            app:title="@string/app_name"
+            app:titleTextColor="@color/white"
+            android:background="@color/purple_700"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
 
-    <TextView
-            android:id="@+id/pune"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:text="@string/app_name"
-            style="@style/TextAppearance.MaterialComponents.Caption"/>
-
-
     <ImageView
             android:id="@+id/log_out"
-            android:layout_width="43dp"
-            android:layout_height="35dp"
-            android:src="@drawable/person"
-            android:layout_marginLeft="340dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_logout_24"
+            android:layout_marginLeft="370dp"
             android:layout_marginTop="10dp"/>
 
+    <ImageView android:id="@+id/mapImg"
+               android:layout_width="330dp"
+               android:layout_height="230dp"
+               android:layout_marginLeft="30dp"
+               android:src="@drawable/plc"
+               android:layout_marginTop="60dp"/>
 
-    <Button android:id="@+id/b1"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Map"
-            android:textColor="@color/black"
-            android:layout_marginTop="250dp"
-            android:background="@color/white"/>
 
-    <Button android:id="@+id/b2"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Places"
-            android:textColor="@color/black"
-            android:layout_marginTop="320dp"
-            android:background="@color/white"/>
+    <TextView android:id="@+id/mapText"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:text="Places"
+              android:textStyle="bold"
+              android:textColor="@color/white"
+              android:layout_marginTop="160dp"
+              android:gravity="center"
+              android:textSize="30sp"/>
 
-    <Button android:id="@+id/b3"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="City Information"
-            android:textColor="@color/black"
-            android:layout_marginTop="390dp"
-            android:background="@color/white"/>
+    <ImageView android:id="@+id/placesImg"
+               android:layout_width="330dp"
+               android:layout_height="230dp"
+               android:layout_marginLeft="30dp"
+               android:src="@drawable/mps"
+                android:layout_marginTop="260dp"/>
 
+
+    <TextView android:id="@+id/placesText"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:text="Map"
+              android:textColor="@color/black"
+              android:textStyle="bold"
+              android:layout_marginTop="350dp"
+              android:gravity="center"
+              android:textSize="30sp"/>
+
+    <ImageView android:layout_width="330dp"
+               android:layout_height="230dp"
+               android:layout_marginLeft="30dp"
+               android:src="@drawable/wada"
+               android:layout_marginTop="470dp"/>
+
+
+    <TextView android:id="@+id/infoText"
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:text="City Information"
+              android:textColor="@color/white"
+              android:textStyle="bold"
+              android:layout_marginTop="550dp"
+              android:gravity="center"
+              android:textSize="30sp"/>
 </RelativeLayout>

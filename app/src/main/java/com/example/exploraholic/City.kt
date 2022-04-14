@@ -2,8 +2,8 @@ package com.example.exploraholic
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -20,9 +20,9 @@ class City : AppCompatActivity(){
 
    // private var locationArrayList: ArrayList<LatLng>?= null
 
-    private lateinit var button1: Button
-    private lateinit var button2: Button
-    private lateinit var button3: Button
+    private lateinit var text1: TextView
+    private lateinit var text2: TextView
+    private lateinit var text3: TextView
     private lateinit var image1 : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,30 +42,30 @@ class City : AppCompatActivity(){
 //        locationArrayList!!.add(Khadakwasla)
 //        locationArrayList!!.add(Mulashi)
 
-        button1 = findViewById(R.id.b1)
-        button2 = findViewById(R.id.b2)
-        button3 = findViewById(R.id.b3)
+        text1 = findViewById(R.id.placesText)
+        text2 = findViewById(R.id.mapText)
+        text3 = findViewById(R.id.infoText)
         image1 = findViewById(R.id.log_out)
 
         // get reference to textview
-        val button1 = findViewById(R.id.b1) as Button
+        val text1 = findViewById(R.id.placesText) as TextView
         // set on-click listener
-        button1.setOnClickListener {
+        text1.setOnClickListener {
             startActivity(Intent(this,MapsActivity::class.java))
 
             Toast.makeText(this@City, "Map", Toast.LENGTH_SHORT).show()
         }
 
-        val button2 = findViewById(R.id.b2) as Button
+        val text2 = findViewById(R.id.mapText) as TextView
         // set on-click listener
-        button2.setOnClickListener {
+        text2.setOnClickListener {
             startActivity(Intent(this,HomePage::class.java))
             Toast.makeText(this@City, "Places", Toast.LENGTH_SHORT).show()
         }
 
-        val button3 = findViewById(R.id.b3) as Button
+        val text3 = findViewById(R.id.infoText) as TextView
         // set on-click listener
-        button3.setOnClickListener {
+        text3.setOnClickListener {
             startActivity(Intent(this,Info::class.java))
             Toast.makeText(this@City, "Information", Toast.LENGTH_SHORT).show()
         }

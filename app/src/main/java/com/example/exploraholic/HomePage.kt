@@ -18,6 +18,8 @@ class HomePage : AppCompatActivity() {
     private lateinit var toolbar: androidx.appcompat.widget.Toolbar  //since type mismatched on line 20
     private lateinit var appPagerAdapter: AppPagerAdapter
     private lateinit var imageView: ImageView
+    private lateinit var homeimg1: ImageView
+
     private val titles = arrayListOf("Hillstations ", "Forts ", "Dams ")  //for multiple list we require titles
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +47,13 @@ class HomePage : AppCompatActivity() {
         image1.setOnClickListener {
             startActivity(Intent(this,LoginScreen::class.java))
             Toast.makeText(this@HomePage, "Logout", Toast.LENGTH_SHORT).show()
+        }
+
+        val homeimg1 = findViewById(R.id.homeimg) as ImageView
+        // set on-click listener
+        homeimg1.setOnClickListener {
+            startActivity(Intent(this,City::class.java))
+            Toast.makeText(this@HomePage, "HomePage", Toast.LENGTH_SHORT).show()
         }
     }
 

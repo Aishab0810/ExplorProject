@@ -39,19 +39,18 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:text="Khadakwasla Dam"/>
+                    android:textColor="#184695"
+                    android:text="@string/Khadakwasla"/>
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/kt2"
                     android:textSize="16sp"
-                    android:textStyle="bold"
                     android:textColor="@color/black"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:text="Khadakwasla Dam is a dam on the Mutha River 21 km from the centre of the city of Pune in Maharashtra, India. The dam created a reservoir known as Khadakwasla Lake which is the main source of water for Pune and its suburbs."/>
+                    android:text="@string/Khadakwasla_info"/>
         </LinearLayout>
 
         <LinearLayout
@@ -72,23 +71,22 @@
                     android:id="@+id/mt1"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="#184695"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:textAlignment="center"
-                    android:text="Mulashi Dam"/>
+                    android:text="@string/Mulashi"/>
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/mt2"
                     android:textSize="16sp"
-                    android:textStyle="bold"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:textColor="@color/black"
-                    android:text="Mulshi is the name of a major dam on the Mula river. It is located in the Mulshi taluka administrative division of the Pune.Water from the dam is used for irrigation as well as for producing electricity at the Bhira hydroelectric power plant."/>
+                    android:text="@string/Mulashi_info"/>
         </LinearLayout>
 
         <!--    <androidx.cardview.widget.CardView -->
