@@ -52,7 +52,7 @@ class HomePage : AppCompatActivity() {
         val homeimg1 = findViewById(R.id.homeimg) as ImageView
         // set on-click listener
         homeimg1.setOnClickListener {
-            startActivity(Intent(this,City::class.java))
+            startActivity(Intent(this,Dashboard::class.java))
             Toast.makeText(this@HomePage, "HomePage", Toast.LENGTH_SHORT).show()
         }
     }

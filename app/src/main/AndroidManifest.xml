@@ -25,6 +25,21 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.ExploraHolic">
         <activity
+                android:name=".Hotel"
+                android:exported="true"/>
+        <activity
+                android:name=".Temple"
+                android:exported="true"/>
+        <activity
+                android:name=".Cafe"
+                android:exported="true"/>
+        <activity
+                android:name=".Hospitals"
+                android:exported="true"/>
+        <activity
+                android:name=".Pmpml"
+                android:exported="true"/>
+        <activity
                 android:name=".Mhill"
                 android:exported="true"/>
         <!--
@@ -47,7 +62,7 @@
                 android:name=".Info"
                 android:exported="true"/>
         <activity
-                android:name=".City"
+                android:name=".Dashboard"
                 android:exported="true"/>
         <activity
                 android:name=".ForgotPassword"

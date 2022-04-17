@@ -45,4 +45,25 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="history">Pune is the cultural capital of the Maratha people.\n\n
+        The city first gained importance as the capital of the Bhonsle Marathas in the 17th century.\n
+        It was temporarily captured by the Mughals but again served as the official Maratha capital from 1714 until its
+        fall to the British in 1817. It was the seasonal capital of the Bombay Presidency and is now a popular tourist
+        resort,
+        offering cool weather, historic and religious monuments, museums, parks, hotels, and cultural attractions.\n\n
+        <b>Pune has long been a major educational and cultural centre.</b>\n\n
+        The region surrounding Pune includes the Sahyadri Hills, the Balaghat Range (north), and the Mahadeo Hills
+        (south),
+        which enclose the northern Bhima River valley.\n
+        Most of the important religious, historical, and tourist attractions of the region are located in the Sahyadri
+        Hills.\n
+        Some of the famous hill forts of the Marathas, such as Sinhgad, are now resorts.
+    </string>
+    <string name="timetable">PMPML offer different types of bus services including Regular, Rainbow, Night,Pune Darshan,
+        Ladies Special And Air Conditioned bus
+        PMPML is also one of the largest bus transport service operator with fleet over 2100 buses. With more than 400
+        bus routes and 2500 bus stops. It connects almost every part of pune and sub-urban with its huge network of
+        buses
+
+    </string>
 </resources>

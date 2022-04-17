@@ -151,7 +151,7 @@ class LoginScreen() : AppCompatActivity() {
                 val email = firebaseUser!!.email
                 Toast.makeText(this,"Logged in as $email",Toast.LENGTH_SHORT).show()
                 //open Homepage
-                startActivity(Intent(this,City::class.java))
+                startActivity(Intent(this,Dashboard::class.java))
                 finish()
 
             }

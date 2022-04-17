@@ -53,6 +53,7 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password11"
             android:layout_width="match_parent"
@@ -94,7 +95,7 @@
             android:layout_height="wrap_content"
             android:text="Register"
             android:layout_below="@id/password11"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="160dp"
             android:textAllCaps="false" tools:ignore="OnClick"/>
 
 
