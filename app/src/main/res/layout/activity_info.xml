@@ -31,8 +31,8 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textSize="30sp"
-                android:textColor="#C33364"
-                android:layout_marginTop="200sp"/>
+                android:textColor="#A50D41"
+                android:layout_marginTop="450sp"/>
 
     <ImageView
             android:id="@+id/homee"
@@ -53,9 +53,9 @@
     <pl.droidsonroids.gif.GifImageView
             android:id="@+id/histg"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/hist"
-            android:layout_marginTop="-430dp"
+            android:layout_height="400dp"
+            android:src="@drawable/travel"
+            android:layout_marginTop="55dp"
     />
 
     <TextView android:id="@+id/infm"
@@ -63,7 +63,7 @@
               android:layout_height="wrap_content"
               android:text="@string/history"
               android:textSize="18sp"
-              android:layout_marginTop="260dp"
+              android:layout_marginTop="500dp"
               android:gravity="center"
               android:textStyle="bold"
               android:textColor="@color/purple_700"/>
