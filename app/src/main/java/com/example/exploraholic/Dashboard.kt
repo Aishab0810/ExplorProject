@@ -17,6 +17,7 @@ class Dashboard : AppCompatActivity(){
     private lateinit var img7: ImageView
     private lateinit var img8: ImageView
     private lateinit var img9: ImageView
+    private lateinit var img10: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,15 +32,9 @@ class Dashboard : AppCompatActivity(){
         img7 = findViewById(R.id.places)
         img8 = findViewById(R.id.log_out)
         img9 = findViewById(R.id.location)
+        img1 = findViewById(R.id.profile)
 
         // get reference to textview
-        val img9 = findViewById(R.id.location) as ImageView
-        // set on-click listener
-        img9.setOnClickListener {
-            startActivity(Intent(this,MapsActivity::class.java))
-
-            Toast.makeText(this@Dashboard, "Map", Toast.LENGTH_SHORT).show()
-        }
 
         val img1 = findViewById(R.id.history) as ImageView
         // set on-click listener
@@ -95,6 +90,22 @@ class Dashboard : AppCompatActivity(){
         img8.setOnClickListener {
             startActivity(Intent(this,LoginScreen::class.java))
             Toast.makeText(this@Dashboard, "Logout", Toast.LENGTH_SHORT).show()
+        }
+
+        val img9 = findViewById(R.id.location) as ImageView
+        // set on-click listener
+        img9.setOnClickListener {
+            startActivity(Intent(this,MapsActivity::class.java))
+
+            Toast.makeText(this@Dashboard, "Map", Toast.LENGTH_SHORT).show()
+        }
+
+        val img10 = findViewById(R.id.profile) as ImageView
+        // set on-click listener
+        img10.setOnClickListener {
+            startActivity(Intent(this,Profile::class.java))
+
+            Toast.makeText(this@Dashboard, "Profile", Toast.LENGTH_SHORT).show()
         }
     }
 }

@@ -58,6 +58,18 @@ dependencies {
 
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
 
+    //Circular image library
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation 'com.google.firebase:firebase-database:20.0.0'       //realtime database
+    implementation 'com.google.firebase:firebase-storage:20.0.0'        //database storage
+
+    //progress dialog library
+    implementation 'com.jpardogo.googleprogressbar:library:1.2.0'
+
+//    implementation 'com.squareup.picasso:picasso:2.71828'
+
+
 //    //navigation components
 //    implementation "androidx.navigation:navigation-fragment-ktx:2.4.1"
 //    implementation "androidx.navigation:navigation-ui-ktx:2.4.1"

@@ -44,6 +44,14 @@
             android:layout_marginLeft="320dp"
             android:layout_marginTop="10dp"/>
 
+    <ImageView
+            android:id="@+id/profile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/person"
+            android:layout_marginLeft="260dp"
+            android:layout_marginTop="10dp"/>
+
     <pl.droidsonroids.gif.GifImageView
             android:id="@+id/go"
             android:layout_width="match_parent"

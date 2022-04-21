@@ -25,6 +25,9 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.ExploraHolic">
         <activity
+                android:name=".Profile"
+                android:exported="true"/>
+        <activity
                 android:name=".Hotel"
                 android:exported="true"/>
         <activity
@@ -39,7 +42,6 @@
         <activity
                 android:name=".Pmpml"
                 android:exported="true"/>
-
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

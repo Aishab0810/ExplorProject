@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -51,8 +52,15 @@
             android:layout_marginTop="-395dp"
     />
 
+<!--    <ImageView-->
+<!--            android:id="@+id/rImage"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp" />-->
+
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
+              android:id="@+id/listText"
               android:text="List of the Cafe"
               android:layout_marginTop="290dp"
               android:gravity="center"
@@ -70,15 +78,15 @@
               android:textColor="#FF6122"
               android:background="#D5CBCB"
     />
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Grandmama's Cafe, Survey No.21,\n Koregaon Park, 394,\n S Main Rd, Pune, Maharashtra 411001"
-              android:layout_marginTop="400dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
-    />
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Grandmama's Cafe, Survey No.21,\n Koregaon Park, 394,\n S Main Rd, Pune, Maharashtra 411001"
+                  android:layout_marginTop="400dp"
+                  android:textSize="18sp"
+                  android:textStyle="bold"
+                  android:textColor="#FF6122"
+                  android:background="#D5CBCB"
+        />
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:text="Mocha LG 4/5 Power Plaza,\n Lane No. 7, Koregaon Park,\n Pune, Maharashtra 411001"
@@ -88,15 +96,15 @@
               android:textColor="#FF6122"
               android:background="#D5CBCB"
     />
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Irani Café Shop No 2, Turning Point 2,\n opp. Rosary School, Viman Nagar,\n Pune, Maharashtra 411014"
-              android:layout_marginTop="560dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
-    />
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Irani Café Shop No 2, Turning Point 2,\n opp. Rosary School, Viman Nagar,\n Pune, Maharashtra 411014"
+                  android:layout_marginTop="560dp"
+                  android:textSize="18sp"
+                  android:textStyle="bold"
+                  android:textColor="#FF6122"
+                  android:background="#D5CBCB"
+        />
 
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
@@ -107,5 +115,7 @@
               android:textColor="#FF6122"
               android:background="#D5CBCB"
     />
+
+
 
 </RelativeLayout>
