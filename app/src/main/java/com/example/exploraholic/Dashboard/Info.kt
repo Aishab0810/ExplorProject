@@ -1,4 +1,4 @@
-package com.example.exploraholic
+package com.example.exploraholic.Dashboard
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.exploraholic.MainScreens.LoginScreen
+import com.example.exploraholic.R
 import pl.droidsonroids.gif.GifImageView
 
 class Info : AppCompatActivity() {
@@ -29,14 +31,14 @@ class Info : AppCompatActivity() {
         val image1 = findViewById(R.id.log_out) as ImageView
         // set on-click listener
         image1.setOnClickListener {
-            startActivity(Intent(this,LoginScreen::class.java))
+            startActivity(Intent(this, LoginScreen::class.java))
             Toast.makeText(this@Info, "Logout", Toast.LENGTH_SHORT).show()
         }
 
         val home11 = findViewById(R.id.homee) as ImageView
         // set on-click listener
         home11.setOnClickListener {
-            startActivity(Intent(this,Dashboard::class.java))
+            startActivity(Intent(this, Dashboard::class.java))
             Toast.makeText(this@Info, "Homepage", Toast.LENGTH_SHORT).show()
         }
     }

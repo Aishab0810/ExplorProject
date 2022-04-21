@@ -1,4 +1,4 @@
-package com.example.exploraholic
+package com.example.exploraholic.Dashboard
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import com.example.exploraholic.Dams
+import com.example.exploraholic.Fragments.Forts
+import com.example.exploraholic.HillStations
+import com.example.exploraholic.MainScreens.LoginScreen
+import com.example.exploraholic.R
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -45,14 +50,14 @@ class HomePage : AppCompatActivity() {
         val image1 = findViewById(R.id.log_out) as ImageView
         // set on-click listener
         image1.setOnClickListener {
-            startActivity(Intent(this,LoginScreen::class.java))
+            startActivity(Intent(this, LoginScreen::class.java))
             Toast.makeText(this@HomePage, "Logout", Toast.LENGTH_SHORT).show()
         }
 
         val homeimg1 = findViewById(R.id.homeimg) as ImageView
         // set on-click listener
         homeimg1.setOnClickListener {
-            startActivity(Intent(this,Dashboard::class.java))
+            startActivity(Intent(this, Dashboard::class.java))
             Toast.makeText(this@HomePage, "HomePage", Toast.LENGTH_SHORT).show()
         }
     }

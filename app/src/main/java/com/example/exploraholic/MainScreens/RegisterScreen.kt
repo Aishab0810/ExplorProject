@@ -1,4 +1,4 @@
-package com.example.exploraholic
+package com.example.exploraholic.MainScreens
 
 
 //import androidx.appcompat.app.ActionBar
@@ -47,7 +47,7 @@ class RegisterScreen() : AppCompatActivity() {
 
         //handle click, Open registerScreen
         binding.reg1.setOnClickListener{
-            startActivity(Intent(this,LoginScreen::class.java))
+            startActivity(Intent(this, LoginScreen::class.java))
         }
 
         //handle click, begin register
@@ -104,7 +104,7 @@ class RegisterScreen() : AppCompatActivity() {
                 val email = firebaseUser!!.email
                 Toast.makeText(this,"Account created with $email",Toast.LENGTH_SHORT).show()
                 //open Login
-                startActivity(Intent(this,LoginScreen::class.java))
+                startActivity(Intent(this, LoginScreen::class.java))
                 finish()
             }
             .addOnFailureListener{ e->

@@ -1,10 +1,14 @@
-package com.example.exploraholic
+package com.example.exploraholic.Dashboard
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.exploraholic.*
+import com.example.exploraholic.MainScreens.LoginScreen
+import com.example.exploraholic.MainScreens.Profile
+import com.example.exploraholic.MapScreen.MapsActivity
 
 class Dashboard : AppCompatActivity(){
 
@@ -39,63 +43,63 @@ class Dashboard : AppCompatActivity(){
         val img1 = findViewById(R.id.history) as ImageView
         // set on-click listener
         img1.setOnClickListener {
-            startActivity(Intent(this,Info::class.java))
+            startActivity(Intent(this, Info::class.java))
             Toast.makeText(this@Dashboard, "History", Toast.LENGTH_SHORT).show()
         }
 
         val img2 = findViewById(R.id.pmpml) as ImageView
         // set on-click listener
         img2.setOnClickListener {
-            startActivity(Intent(this,Pmpml::class.java))
+            startActivity(Intent(this, Pmpml::class.java))
             Toast.makeText(this@Dashboard, "PMPML", Toast.LENGTH_SHORT).show()
         }
 
         val img3 = findViewById(R.id.hospitals) as ImageView
         // set on-click listener
         img3.setOnClickListener {
-            startActivity(Intent(this,Hospitals::class.java))
+            startActivity(Intent(this, Hospitals::class.java))
             Toast.makeText(this@Dashboard, "Hospitals", Toast.LENGTH_SHORT).show()
         }
 
         val img4 = findViewById(R.id.cafe) as ImageView
         // set on-click listener
         img4.setOnClickListener {
-            startActivity(Intent(this,Cafe::class.java))
+            startActivity(Intent(this, Cafe::class.java))
             Toast.makeText(this@Dashboard, "Cafes", Toast.LENGTH_SHORT).show()
         }
 
         val img5 = findViewById(R.id.temple) as ImageView
         // set on-click listener
         img5.setOnClickListener {
-            startActivity(Intent(this,Temple::class.java))
+            startActivity(Intent(this, Temple::class.java))
             Toast.makeText(this@Dashboard, "Temples", Toast.LENGTH_SHORT).show()
         }
 
         val img6 = findViewById(R.id.hotel) as ImageView
         // set on-click listener
         img6.setOnClickListener {
-            startActivity(Intent(this,Hotel::class.java))
+            startActivity(Intent(this, Hotel::class.java))
             Toast.makeText(this@Dashboard, "Hotels", Toast.LENGTH_SHORT).show()
         }
 
         val img7 = findViewById(R.id.places) as ImageView
         // set on-click listener
         img7.setOnClickListener {
-            startActivity(Intent(this,HomePage::class.java))
+            startActivity(Intent(this, HomePage::class.java))
             Toast.makeText(this@Dashboard, "Places", Toast.LENGTH_SHORT).show()
         }
 
         val img8 = findViewById(R.id.log_out) as ImageView
         // set on-click listener
         img8.setOnClickListener {
-            startActivity(Intent(this,LoginScreen::class.java))
+            startActivity(Intent(this, LoginScreen::class.java))
             Toast.makeText(this@Dashboard, "Logout", Toast.LENGTH_SHORT).show()
         }
 
         val img9 = findViewById(R.id.location) as ImageView
         // set on-click listener
         img9.setOnClickListener {
-            startActivity(Intent(this,MapsActivity::class.java))
+            startActivity(Intent(this, MapsActivity::class.java))
 
             Toast.makeText(this@Dashboard, "Map", Toast.LENGTH_SHORT).show()
         }
@@ -103,7 +107,7 @@ class Dashboard : AppCompatActivity(){
         val img10 = findViewById(R.id.profile) as ImageView
         // set on-click listener
         img10.setOnClickListener {
-            startActivity(Intent(this,Profile::class.java))
+            startActivity(Intent(this, Profile::class.java))
 
             Toast.makeText(this@Dashboard, "Profile", Toast.LENGTH_SHORT).show()
         }

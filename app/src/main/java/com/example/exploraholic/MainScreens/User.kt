@@ -1,3 +1,3 @@
-package com.example.exploraholic
+package com.example.exploraholic.MainScreens
 
 data class User(var firstName : String ?=null, var lastName : String ?=null, var email : String ?=null)

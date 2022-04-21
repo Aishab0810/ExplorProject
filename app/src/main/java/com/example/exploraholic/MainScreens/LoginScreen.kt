@@ -1,4 +1,4 @@
-package com.example.exploraholic
+package com.example.exploraholic.MainScreens
 
 //import androidx.appcompat.app.ActionBar
 import android.app.ProgressDialog
@@ -8,6 +8,7 @@ import android.text.TextUtils
 import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.exploraholic.Dashboard.Dashboard
 import com.example.exploraholic.databinding.ActivityLoginScreenBinding
 import com.google.firebase.auth.FirebaseAuth
 import java.util.regex.Pattern
@@ -56,11 +57,11 @@ class LoginScreen() : AppCompatActivity() {
 
         //handle click, Open registerScreen
         binding.reg.setOnClickListener{
-            startActivity(Intent(this,RegisterScreen::class.java))
+            startActivity(Intent(this, RegisterScreen::class.java))
         }
 
         binding.fpswd.setOnClickListener{
-            startActivity(Intent(this,ForgotPassword::class.java))
+            startActivity(Intent(this, ForgotPassword::class.java))
         }
 
         //handle click, begin login
@@ -151,7 +152,7 @@ class LoginScreen() : AppCompatActivity() {
                 val email = firebaseUser!!.email
                 Toast.makeText(this,"Logged in as $email",Toast.LENGTH_SHORT).show()
                 //open Homepage
-                startActivity(Intent(this,Dashboard::class.java))
+                startActivity(Intent(this, Dashboard::class.java))
                 finish()
 
             }

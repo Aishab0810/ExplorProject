@@ -1,10 +1,11 @@
-package com.example.exploraholic
+package com.example.exploraholic.Fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.exploraholic.R
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -13,10 +14,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Pullup.newInstance] factory method to
+ * Use the [Pushup.newInstance] factory method to
  * create an instance of this fragment.
  */
-class HillStations : Fragment() {
+class Forts : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,7 +35,7 @@ class HillStations : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_hill_stations, container, false)
+        return inflater.inflate(R.layout.fragment_forts, container, false)
     }
 
     companion object {
@@ -44,12 +45,12 @@ class HillStations : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment HillStations.
+         * @return A new instance of fragment Forts.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Dams().apply {
+            Forts().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

@@ -1,4 +1,4 @@
-package com.example.exploraholic
+package com.example.exploraholic.MainScreens
 
 import android.app.Dialog
 import android.content.Intent
@@ -8,6 +8,8 @@ import android.view.Window
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.exploraholic.Dashboard.Dashboard
+import com.example.exploraholic.R
 import com.example.exploraholic.databinding.ActivityProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -33,7 +35,7 @@ class Profile : AppCompatActivity() {
         dashboard = findViewById(R.id.Dashboard)
 
         dashboard.setOnClickListener {
-            startActivity(Intent(this,Dashboard::class.java))
+            startActivity(Intent(this, Dashboard::class.java))
         }
 
         auth =FirebaseAuth.getInstance()

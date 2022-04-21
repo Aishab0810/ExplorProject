@@ -25,22 +25,22 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.ExploraHolic">
         <activity
-                android:name=".Profile"
+                android:name=".MainScreens.Profile"
                 android:exported="true"/>
         <activity
-                android:name=".Hotel"
+                android:name=".Dashboard.Hotel"
                 android:exported="true"/>
         <activity
-                android:name=".Temple"
+                android:name=".Dashboard.Temple"
                 android:exported="true"/>
         <activity
-                android:name=".Cafe"
+                android:name=".Dashboard.Cafe"
                 android:exported="true"/>
         <activity
-                android:name=".Hospitals"
+                android:name=".Dashboard.Hospitals"
                 android:exported="true"/>
         <activity
-                android:name=".Pmpml"
+                android:name=".Dashboard.Pmpml"
                 android:exported="true"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -55,17 +55,17 @@
                 android:value="@string/google_maps_key"/>
 
         <activity
-                android:name=".MapsActivity"
+                android:name=".MapScreen.MapsActivity"
                 android:exported="true"
                 android:label="@string/title_activity_maps"/>
         <activity
-                android:name=".Info"
+                android:name=".Dashboard.Info"
                 android:exported="true"/>
         <activity
-                android:name=".Dashboard"
+                android:name=".Dashboard.Dashboard"
                 android:exported="true"/>
         <activity
-                android:name=".ForgotPassword"
+                android:name=".MainScreens.ForgotPassword"
                 android:exported="true"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -79,13 +79,13 @@
         <!-- android:name="com.google.android.geo.API_KEY" -->
         <!-- android:value="@string/google_maps_key"/> -->
         <activity
-                android:name=".HomePage"
+                android:name=".Dashboard.HomePage"
                 android:exported="true"/>
         <activity
-                android:name=".RegisterScreen"
+                android:name=".MainScreens.RegisterScreen"
                 android:exported="true"/>
         <activity
-                android:name=".LoginScreen"
+                android:name=".MainScreens.LoginScreen"
                 android:exported="true"/>
         <activity
                 android:name=".MainActivity"

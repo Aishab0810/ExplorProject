@@ -1,4 +1,4 @@
-package com.example.exploraholic
+package com.example.exploraholic.MainScreens
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.exploraholic.R
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 
@@ -85,14 +86,14 @@ class ForgotPassword : AppCompatActivity() {
         val rememberPassword = findViewById(R.id.remember) as TextView
         // set on-click listener
         rememberPassword.setOnClickListener {
-            startActivity(Intent(this,LoginScreen::class.java))
+            startActivity(Intent(this, LoginScreen::class.java))
         }
 
         // get reference to textview
         val createAccount = findViewById(R.id.create) as TextView
         // set on-click listener
         createAccount.setOnClickListener {
-            startActivity(Intent(this,RegisterScreen::class.java))
+            startActivity(Intent(this, RegisterScreen::class.java))
         }
 
     }

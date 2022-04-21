@@ -1,4 +1,4 @@
-package com.example.exploraholic
+package com.example.exploraholic.MainScreens
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -7,6 +7,8 @@ import android.util.Log
 import android.view.WindowManager
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
+import com.example.exploraholic.MainScreens.LoginScreen
+import com.example.exploraholic.R
 import com.example.exploraholic.databinding.ActivityMainBinding
 
 public const val SPLASH_TIME = 4000L
@@ -31,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         Handler(Looper.myLooper()!!).postDelayed(
             {
-                val intent= Intent(this,LoginScreen::class.java)
+                val intent= Intent(this, LoginScreen::class.java)
                 startActivity(intent)
                 finish()
             },
@@ -44,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             Log.d("MainActivity","is valid email $it => ${isValidString(it)}")
         }
 
-        val fadeInAnim = AnimationUtils.loadAnimation(this,R.anim.anim)
+        val fadeInAnim = AnimationUtils.loadAnimation(this, R.anim.anim)
         binding.applogo.animation=fadeInAnim
     }
 }

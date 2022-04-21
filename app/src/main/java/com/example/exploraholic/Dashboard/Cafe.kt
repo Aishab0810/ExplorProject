@@ -1,10 +1,14 @@
-package com.example.exploraholic
+package com.example.exploraholic.Dashboard
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.exploraholic.MainScreens.LoginScreen
+import com.example.exploraholic.MapScreen.MapsActivity
+import com.example.exploraholic.R
+
 //import com.google.firebase.database.DataSnapshot
 //import com.google.firebase.database.DatabaseError
 //import com.google.firebase.database.FirebaseDatabase
@@ -69,21 +73,21 @@ class Cafe : AppCompatActivity() {
         val location1 = findViewById(R.id.location) as ImageView
         // set on-click listener
         location1.setOnClickListener {
-            startActivity(Intent(this,MapsActivity::class.java))
+            startActivity(Intent(this, MapsActivity::class.java))
             Toast.makeText(this@Cafe, "Map", Toast.LENGTH_SHORT).show()
         }
 
         val logout1 = findViewById(R.id.log_out) as ImageView
         // set on-click listener
         logout1.setOnClickListener {
-            startActivity(Intent(this,LoginScreen::class.java))
+            startActivity(Intent(this, LoginScreen::class.java))
             Toast.makeText(this@Cafe, "Logout", Toast.LENGTH_SHORT).show()
         }
 
         val home11 = findViewById(R.id.homee) as ImageView
         // set on-click listener
         home11.setOnClickListener {
-            startActivity(Intent(this,Dashboard::class.java))
+            startActivity(Intent(this, Dashboard::class.java))
             Toast.makeText(this@Cafe, "Homepage", Toast.LENGTH_SHORT).show()
         }
     }

@@ -1,7 +1,8 @@
-package com.example.exploraholic
+package com.example.exploraholic.MapScreen
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.exploraholic.R
 import com.example.exploraholic.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
