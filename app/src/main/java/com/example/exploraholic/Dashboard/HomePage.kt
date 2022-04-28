@@ -9,9 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.example.exploraholic.Dams
+import com.example.exploraholic.Fragments.Dams
 import com.example.exploraholic.Fragments.Forts
-import com.example.exploraholic.HillStations
+import com.example.exploraholic.Fragments.HillStations
 import com.example.exploraholic.MainScreens.LoginScreen
 import com.example.exploraholic.R
 import com.google.android.material.tabs.TabLayout

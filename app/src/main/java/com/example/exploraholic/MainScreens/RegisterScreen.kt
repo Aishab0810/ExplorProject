@@ -110,7 +110,7 @@ class RegisterScreen() : AppCompatActivity() {
             .addOnFailureListener{ e->
                 //login failed
                 progressDialog.dismiss()
-                Toast.makeText(this,"Registration failed dur to ${e.message}",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Registration failed due to ${e.message}",Toast.LENGTH_SHORT).show()
             }
     }
 

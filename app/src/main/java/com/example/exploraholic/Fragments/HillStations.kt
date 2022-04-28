@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.exploraholic.Dams
 import com.example.exploraholic.R
 
 // TODO: Rename parameter arguments, choose names that match
