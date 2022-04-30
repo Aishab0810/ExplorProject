@@ -7,6 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Dashboard.HomePage"
+              android:padding="10dp"
         android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
@@ -22,8 +23,8 @@
                 android:id="@+id/homeimg"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/homebtn"
-                android:layout_marginLeft="200dp"/>
+                android:src="@drawable/ic_baseline_home_24"
+                android:layout_marginLeft="180dp"/>
 
         <ImageView
                 android:id="@+id/log_out"
