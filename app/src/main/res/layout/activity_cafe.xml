@@ -7,6 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
             tools:context=".Dashboard.Cafe"
+        android:padding="10dp"
 >
 
     <androidx.appcompat.widget.Toolbar
@@ -24,7 +25,7 @@
             android:id="@+id/homee"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/homebtn"
+            android:src="@drawable/ic_baseline_home_24"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="260dp"/>
 
@@ -40,8 +41,8 @@
             android:id="@+id/location"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/lctn"
-            android:layout_marginLeft="320dp"
+            android:src="@drawable/map"
+            android:layout_marginLeft="315dp"
             android:layout_marginTop="10dp"/>
 
     <pl.droidsonroids.gif.GifImageView
@@ -64,56 +65,17 @@
               android:text="List of the Cafe"
               android:layout_marginTop="290dp"
               android:gravity="center"
-              android:textSize="20sp"
+              android:textSize="22sp"
               android:textStyle="bold"
-              android:textColor="@color/purple_700"
+              android:background="@color/purple_700"
+              android:textColor="@color/white"
     />
-
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="CAFE BEANS, near AADITYA GARDAN CITY,\n Aditya Garden City, Warje,\n Pune, Maharashtra 411058"
-              android:layout_marginTop="320dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
-    />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="Grandmama's Cafe, Survey No.21,\n Koregaon Park, 394,\n S Main Rd, Pune, Maharashtra 411001"
-                  android:layout_marginTop="400dp"
-                  android:textSize="18sp"
-                  android:textStyle="bold"
-                  android:textColor="#FF6122"
-                  android:background="#D5CBCB"
-        />
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Mocha LG 4/5 Power Plaza,\n Lane No. 7, Koregaon Park,\n Pune, Maharashtra 411001"
-              android:layout_marginTop="480dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
-    />
-        <TextView android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:text="Irani Café Shop No 2, Turning Point 2,\n opp. Rosary School, Viman Nagar,\n Pune, Maharashtra 411014"
-                  android:layout_marginTop="560dp"
-                  android:textSize="18sp"
-                  android:textStyle="bold"
-                  android:textColor="#FF6122"
-                  android:background="#D5CBCB"
-        />
-
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Pocket cafe, Shop No-7, Dodke Tower,\n Pune - Bengaluru Hwy, opposite Tata Motors,\n Giridhar Nagar, Warje, Pune, Maharashtra 411052"
-              android:layout_marginTop="640dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerview"
+            android:layout_below="@+id/listText"
+            tools:listitem="@layout/card_view_design"
     />
 
 

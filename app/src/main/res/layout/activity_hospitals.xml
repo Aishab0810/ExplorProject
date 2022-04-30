@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -6,6 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Dashboard.Hospitals"
+        android:padding="10dp"
 >
 
     <androidx.appcompat.widget.Toolbar
@@ -23,7 +25,7 @@
             android:id="@+id/homee"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/homebtn"
+            android:src="@drawable/ic_baseline_home_24"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="260dp"/>
 
@@ -39,63 +41,42 @@
             android:id="@+id/location"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/lctn"
-            android:layout_marginLeft="320dp"
+            android:src="@drawable/map"
+            android:layout_marginLeft="315dp"
             android:layout_marginTop="10dp"/>
 
     <pl.droidsonroids.gif.GifImageView
-            android:id="@+id/cafeg"
+            android:id="@+id/hospg"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/hospg"
-            android:layout_marginTop="-345dp"
+            android:layout_marginTop="-340dp"
     />
+
+    <!--    <ImageView-->
+    <!--            android:id="@+id/rImage"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="20dp" />-->
 
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:text="List of the hospitals"
-              android:layout_marginTop="260dp"
+              android:id="@+id/listText"
+              android:text="List of the Hospitals"
+              android:layout_marginTop="290dp"
               android:gravity="center"
-              android:textSize="20sp"
+              android:textSize="22sp"
               android:textStyle="bold"
-              android:textColor="@color/purple_700"
+              android:background="@color/purple_700"
+              android:textColor="@color/white"
+    />
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerview"
+            android:layout_below="@+id/listText"
+            tools:listitem="@layout/card_view_design"
     />
 
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Jehangir Hospital General hospital,\n Sasoon Rd, Opposite Railway Station\n020 6681 9999\n Open 24 hours   COVID-19 hospital"
-              android:layout_marginTop="300dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
-    />
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Sahyadri Speciality Hospital,\n Hospital near Hermes Heritage Phase II\n Open 24 hours   COVID-19 hospital"
-              android:layout_marginTop="400dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
-    />
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Manipal Hospital, Kharadi - Pune\n General hospital, Mundhwa - Kharadi Rd,\n Near Nyati Empire · 020 6165 6666\n Open 24 hours      COVID-19 hospital"
-              android:layout_marginTop="480dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
-    />
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Dr. Mulay Super Speciality Hospital\n C/O Dr. Mulay Super Speciality Hospital,\n Bhagwan Tatyasaheb Kawade Rd,\nBhaskar Colony, Swami Vivekanand Nagar,\n Lakshmi Nagar, Wanowrie , Pune - 411040"
-              android:layout_marginTop="580dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
-    />
 
 </RelativeLayout>

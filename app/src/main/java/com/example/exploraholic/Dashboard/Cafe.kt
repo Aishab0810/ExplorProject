@@ -5,70 +5,61 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.exploraholic.Adapter.CustomAdapter
+import com.example.exploraholic.DataClass.ItemsViewModel
 import com.example.exploraholic.MainScreens.LoginScreen
 import com.example.exploraholic.MapScreen.MapsActivity
 import com.example.exploraholic.R
 
-//import com.google.firebase.database.DataSnapshot
-//import com.google.firebase.database.DatabaseError
-//import com.google.firebase.database.FirebaseDatabase
-//import com.google.firebase.database.ValueEventListener
-//
-//import com.squareup.picasso.Picasso;
-
-
 class Cafe : AppCompatActivity() {
-
-    // Initializing the ImageView
-   // var rImage: ImageView? = null
 
     private lateinit var location1: ImageView
     private lateinit var logout1: ImageView
     private lateinit var homee1: ImageView
 
+    private lateinit var newRecyclerView: RecyclerView
+    private lateinit var newArrayList: ArrayList<ItemsViewModel>
+    lateinit var imageId: Array<Int>
+    lateinit var heading: Array<String>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cafe)
 
+        imageId = arrayOf(R.drawable.cafe, R.drawable.cafe, R.drawable.cafe,R.drawable.cafe,R.drawable.cafe,
+            R.drawable.cafe,R.drawable.cafe,R.drawable.cafe,R.drawable.cafe,R.drawable.cafe,
+        )
+            heading = arrayOf(
+                "CAFE BEANS, near AADITYA GARDAN CITY,\n Aditya Garden City, Warje,\n Pune, Maharashtra 411058",
+                "Grandmama's Cafe, Survey No.21,\n Koregaon Park, 394,\n S Main Rd, Pune, Maharashtra 411001",
+                "Mocha LG 4/5 Power Plaza,\n Lane No. 7, Koregaon Park,\n Pune, Maharashtra 411001",
+                "Irani Café Shop No 2, Turning Point 2,\n opp. Rosary School, Viman Nagar,\n Pune, Maharashtra 411014",
+                "Pocket cafe, Shop No-7, Dodke Tower,\n Pune - Bengaluru Hwy, opposite Tata Motors,\n Giridhar Nagar, Warje",
+                "Pagdandi - Books Chai Café, Shop 6,\n Regent Plaza, Baner Pashan Link Road,\n Behind Symantec, Baner, Pune",
+                "Fat Cat's Café Shop no 5, Clover Heights Shopping, Salunke Vihar Road, Wanowrie",
+                "Cafe Eastwood Chintamani Pride, Near Citypride, Kothrud, Pune",
+                "Cafe Bread N Butter Shop 20, Swapnanagari, Karve Road, Erandwane, Pune",
+                "Waari Book Café Off Karve Road, Kothrud, Pune"
+            )
+
+        // getting the recyclerview by its id
+        newRecyclerView = findViewById(R.id.recyclerview)
+
+        // this creates a vertical layout Manager
+        newRecyclerView.layoutManager = LinearLayoutManager(this)
+
+        //If we have a RecyclerView with match_parent as height/width, we should add setHasFixedSize(true) since the size of the RecyclerView itself does not change inserting or deleting items into it.
+        newRecyclerView.setHasFixedSize(true)
+
+        newArrayList = arrayListOf<ItemsViewModel>()
+
+        getUserData()
+
         location1 = findViewById(R.id.location)
         logout1 = findViewById(R.id.log_out)
         homee1 = findViewById(R.id.homee)
-
-        // getting ImageView by its id
-        //rImage = findViewById(R.id.rImage);
-
-        // we will get the default FirebaseDatabase instance
-        //val firebaseDatabase = FirebaseDatabase.getInstance()
-
-        // we will get a DatabaseReference for the database root node
-        //val databaseReference = firebaseDatabase.reference
-
-        // Here "image" is the child node value we are getting
-        // child node data in the getImage variable
-        //val getImage = databaseReference.child("image")
-
-        // Adding listener for a single change
-        // in the data at this location.
-        // this listener will triggered once
-        // with the value of the data at the location
-//        getImage.addListenerForSingleValueEvent(object : ValueEventListener {
-//            override fun onDataChange(dataSnapshot: DataSnapshot) {
-//                // getting a DataSnapshot for the location at the specified
-//                // relative path and getting in the link variable
-//                val link = dataSnapshot.getValue(String::class.java)
-//
-//                // loading that data into rImage
-//                // variable which is ImageView
-//                Picasso.get().load(link).into(rImage)
-//            }
-//
-//            // this will called when any problem
-//            // occurs in getting data
-//            override fun onCancelled(databaseError: DatabaseError) {
-//                // we are showing that error message in toast
-//                Toast.makeText(this@Cafe, "Error Loading Image", Toast.LENGTH_SHORT).show()
-//            }
-//        })
 
         val location1 = findViewById(R.id.location) as ImageView
         // set on-click listener
@@ -90,5 +81,16 @@ class Cafe : AppCompatActivity() {
             startActivity(Intent(this, Dashboard::class.java))
             Toast.makeText(this@Cafe, "Homepage", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun getUserData() {
+
+        for(i in imageId.indices){
+             val itemsViewModel = ItemsViewModel(imageId[i],heading[i])
+            newArrayList.add(itemsViewModel)
+        }
+
+        newRecyclerView.adapter = CustomAdapter(newArrayList)
+
     }
 }

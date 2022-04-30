@@ -31,6 +31,7 @@ class RegisterScreen() : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //layoutInflater converts an xml layout file into corresponding viewgroups and widgets
         binding = ActivityRegisterScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

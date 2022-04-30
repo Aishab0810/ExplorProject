@@ -2,6 +2,7 @@ package com.example.exploraholic.Dashboard
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.exploraholic.MainScreens.LoginScreen
 import com.example.exploraholic.R
 import pl.droidsonroids.gif.GifImageView
+
 
 class Info : AppCompatActivity() {
 
@@ -26,6 +28,8 @@ class Info : AppCompatActivity() {
         iv11 = findViewById(R.id.histg)
         infm1 = findViewById(R.id.infm)
         homee1 = findViewById(R.id.homee)
+
+        infm1.setMovementMethod(ScrollingMovementMethod())
 
 
         val image1 = findViewById(R.id.log_out) as ImageView

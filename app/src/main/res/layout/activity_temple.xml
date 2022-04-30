@@ -23,7 +23,7 @@
             android:id="@+id/homee"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/homebtn"
+            android:src="@drawable/ic_baseline_home_24"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="260dp"/>
 
@@ -39,8 +39,8 @@
             android:id="@+id/location"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/lctn"
-            android:layout_marginLeft="320dp"
+            android:src="@drawable/map"
+            android:layout_marginLeft="315dp"
             android:layout_marginTop="10dp"/>
 
     <pl.droidsonroids.gif.GifImageView
@@ -53,59 +53,21 @@
 
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
+              android:id="@+id/listText"
               android:text="List of the Temples"
-              android:layout_marginTop="315dp"
+              android:layout_marginTop="320dp"
               android:gravity="center"
-              android:textSize="20sp"
+              android:textSize="22sp"
               android:textStyle="bold"
-              android:textColor="@color/purple_700"
+              android:background="@color/purple_700"
+              android:textColor="@color/white"
     />
-
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Bhimshakar temple, Maharashtra State Highway 112,\n Bhimashankar, Maharashtra 410509"
-              android:layout_marginTop="340dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
-    />
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Chaturshringi temple,Senapati Bapat Road,\n Near Pune University Rd, Gokhalenagar,\n Pune, Maharashtra 411016."
-              android:layout_marginTop="420dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
-    />
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Dagaduseth Halwai Ganapathi temple,\n Ganpati Bhavan, 250, Budhwar Peth, Pune, Maharashtra 411002."
-              android:layout_marginTop="500dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
-    />
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Neelkantheswar temple, Road Number 1,\n Kondhur, Maharashtra 412107, India."
-              android:layout_marginTop="580dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
-    />
-
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Pataleshwar cave temple,\n Jangali Maharaj Road, Revenue Colony,\n Shivajinagar, Pune, Maharashtra, 411005, India."
-              android:layout_marginTop="640dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerview"
+            android:layout_below="@+id/listText"
+            tools:listitem="@layout/card_view_design"
     />
 
 </RelativeLayout>

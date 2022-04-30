@@ -6,6 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Dashboard.Hotel"
+        android:padding="10dp"
 >
 
     <androidx.appcompat.widget.Toolbar
@@ -23,7 +24,7 @@
             android:id="@+id/homee"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/homebtn"
+            android:src="@drawable/ic_baseline_home_24"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="260dp"/>
 
@@ -39,8 +40,8 @@
             android:id="@+id/location"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/lctn"
-            android:layout_marginLeft="320dp"
+            android:src="@drawable/map"
+            android:layout_marginLeft="315dp"
             android:layout_marginTop="10dp"/>
 
     <pl.droidsonroids.gif.GifImageView
@@ -48,54 +49,26 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/hotelg"
-            android:layout_marginTop="-345dp"
+            android:layout_marginTop="-330dp"
     />
 
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
+              android:id="@+id/listText"
               android:text="List of the Hotels"
-              android:layout_marginTop="350dp"
+              android:layout_marginTop="360dp"
               android:gravity="center"
-              android:textSize="20sp"
+              android:textSize="22sp"
               android:textStyle="bold"
-              android:textColor="@color/purple_700"
+              android:background="@color/purple_700"
+              android:textColor="@color/white"
     />
-
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Courtyard by Marriott,S. No 19 and 20,\n P4 Rajiv Gandhi Infotech Park Phase,\n Hinjewadi, Pune, India - 411057"
-              android:layout_marginTop="380dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
-    />
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Hotel Studio Estique,Next to Inox Multiplex,\n Near Council Hall, Bund Garden Road,\n Pune India - 411001"
-              android:layout_marginTop="460dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
-    />
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="Quality Hotel Regency,\n 192, Dhole Patil Road, Pune. Maharashtra,\n India. - 411001"
-              android:layout_marginTop="540dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
-    />
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:text="PARK VIEW SERVICE APARTMENTS,\n Sector No.18, Plot No. 710,\n Shahunagar, Shivtejnagar,\n Behind Chinchwad RTO,Pune - 411077"
-              android:layout_marginTop="620dp"
-              android:textSize="18sp"
-              android:textStyle="bold"
-              android:textColor="#FF6122"
-              android:background="#D5CBCB"
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerview"
+            android:layout_below="@+id/listText"
+            tools:listitem="@layout/card_view_design"
     />
 
 </RelativeLayout>
