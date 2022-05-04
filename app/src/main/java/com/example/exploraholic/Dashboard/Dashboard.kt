@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.exploraholic.*
+import com.example.exploraholic.MainScreens.EditProfile
 import com.example.exploraholic.MainScreens.LoginScreen
-import com.example.exploraholic.MainScreens.Profile
 import com.example.exploraholic.MapScreen.MapsActivity
+import com.example.exploraholic.R
 
 class Dashboard : AppCompatActivity(){
 
@@ -107,7 +107,7 @@ class Dashboard : AppCompatActivity(){
         val img10 = findViewById(R.id.profile) as ImageView
         // set on-click listener
         img10.setOnClickListener {
-            startActivity(Intent(this, Profile::class.java))
+            startActivity(Intent(this, EditProfile::class.java))
 
             Toast.makeText(this@Dashboard, "Profile", Toast.LENGTH_SHORT).show()
         }

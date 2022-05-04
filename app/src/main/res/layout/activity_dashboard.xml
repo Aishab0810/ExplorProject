@@ -9,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Dashboard.Dashboard"
-        android:padding="10dp"
         android:background="#4288BF">
 
 <!--    <fragment android:id="@+id/myMap"-->
@@ -89,7 +88,7 @@
     />
     <TextView android:layout_width="70dp"
               android:layout_height="70dp"
-              android:layout_marginLeft="180dp"
+              android:layout_marginLeft="175dp"
               android:layout_marginTop="430dp"
               android:text="PMPML"
               android:textColor="@color/white"
@@ -97,14 +96,14 @@
     />
 
     <de.hdodenhof.circleimageview.CircleImageView android:layout_width="70dp"
-               android:layout_height="70dp"
-               android:id="@+id/hospitals"
-               android:src="@drawable/hospital"
-               android:layout_marginLeft="310dp"
-               android:layout_marginTop="360dp"/>
+                                                  android:layout_height="70dp"
+                                                  android:id="@+id/hospitals"
+                                                  android:src="@drawable/hospital"
+                                                  android:layout_marginLeft="305dp"
+                                                  android:layout_marginTop="360dp"/>
     <TextView android:layout_width="70dp"
               android:layout_height="70dp"
-              android:layout_marginLeft="312dp"
+              android:layout_marginLeft="310dp"
               android:layout_marginTop="430dp"
               android:text="Hospitals"
               android:textColor="@color/white"
@@ -133,9 +132,10 @@
                android:layout_marginLeft="170dp"
                android:src="@drawable/temple"
                android:layout_marginTop="470dp"/>
+
     <TextView android:layout_width="70dp"
               android:layout_height="70dp"
-              android:layout_marginLeft="180dp"
+              android:layout_marginLeft="175dp"
               android:layout_marginTop="538dp"
               android:text="Temple"
               android:textColor="@color/white"
@@ -145,12 +145,12 @@
     <de.hdodenhof.circleimageview.CircleImageView android:layout_width="70dp"
                                                   android:layout_height="70dp"
                                                   android:id="@+id/hotel"
-                                                  android:layout_marginLeft="310dp"
+                                                  android:layout_marginLeft="305dp"
                                                   android:src="@drawable/food"
                                                   android:layout_marginTop="470dp"/>
     <TextView android:layout_width="70dp"
               android:layout_height="70dp"
-              android:layout_marginLeft="325dp"
+              android:layout_marginLeft="318dp"
               android:layout_marginTop="538dp"
               android:text="Hotels"
               android:textColor="@color/white"
@@ -158,15 +158,15 @@
     />
 
     <de.hdodenhof.circleimageview.CircleImageView android:layout_width="70dp"
-               android:layout_height="70dp"
-               android:id="@+id/places"
-               android:layout_marginLeft="170dp"
-               android:src="@drawable/place"
-               android:layout_marginTop="580dp"/>
+                                                  android:layout_height="70dp"
+                                                  android:id="@+id/places"
+                                                  android:layout_marginLeft="170dp"
+                                                  android:src="@drawable/place"
+                                                  android:layout_marginTop="580dp"/>
 
     <TextView android:layout_width="70dp"
               android:layout_height="70dp"
-              android:layout_marginLeft="180dp"
+              android:layout_marginLeft="182dp"
               android:layout_marginTop="650dp"
               android:text="Places"
               android:textColor="@color/white"
