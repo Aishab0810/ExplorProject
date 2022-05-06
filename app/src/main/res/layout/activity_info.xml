@@ -6,7 +6,6 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"
         tools:context=".Dashboard.Info">
 
     <androidx.appcompat.widget.Toolbar
@@ -34,15 +33,15 @@
             android:layout_height="30dp"
             android:src="@drawable/ic_baseline_home_24"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="300dp"/>
+            android:layout_marginLeft="320dp"/>
 
     <ImageView
             android:id="@+id/log_out"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_baseline_logout_24"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="350dp"/>
+            android:layout_marginLeft="370dp"
+            android:layout_marginTop="10dp"/>
 
     <pl.droidsonroids.gif.GifImageView
             android:id="@+id/histg"

@@ -65,4 +65,12 @@
         buses
 
     </string>
+
+    <!--    <string-array name="gender_list">-->
+    <!--        <hint>Gender</hint>-->
+    <!--        <item>Male</item>-->
+    <!--        <item>Female</item>-->
+    <!--        <item>Other</item>-->
+    <!--    </string-array>-->
+
 </resources>
