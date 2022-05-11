@@ -24,26 +24,26 @@ class Info : AppCompatActivity() {
         setContentView(R.layout.activity_info)
 
         pune_id1 = findViewById(R.id.pune_id)
-        logout1 = findViewById(R.id.log_out)
         iv11 = findViewById(R.id.histg)
         infm1 = findViewById(R.id.infm)
+        logout1 = findViewById(R.id.log_out)
         homee1 = findViewById(R.id.homee)
 
         infm1.setMovementMethod(ScrollingMovementMethod())
 
 
-        val logout1 = findViewById(R.id.log_out) as ImageView
+//        val logout1 = findViewById(R.id.log_out) as ImageView
         // set on-click listener
         logout1.setOnClickListener {
             startActivity(Intent(this, LoginScreen::class.java))
-            Toast.makeText(this@Info, "Logout", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@Info,"Logged out",Toast.LENGTH_SHORT).show()
         }
 
-        val homee1 = findViewById(R.id.homee) as ImageView
+//        val home11 = findViewById(R.id.homee) as ImageView
         // set on-click listener
         homee1.setOnClickListener {
-            startActivity(Intent(this, Dashboard::class.java))
-            Toast.makeText(this@Info, "Homepage", Toast.LENGTH_SHORT).show()
+            startActivity(Intent (this,Dashboard::class.java))
+            Toast.makeText(this@Info,"Dashboard",Toast.LENGTH_SHORT).show()
         }
     }
 }

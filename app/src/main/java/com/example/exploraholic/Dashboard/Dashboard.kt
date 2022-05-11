@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.exploraholic.MainScreens.LoginScreen
 import com.example.exploraholic.MainScreens.Profile
-import com.example.exploraholic.MapScreen.MapsActivity
+import com.example.exploraholic.MapScreen.MapWithSearchbar
 import com.example.exploraholic.R
 
 class Dashboard : AppCompatActivity(){
@@ -99,7 +99,7 @@ class Dashboard : AppCompatActivity(){
         val img9 = findViewById(R.id.location) as ImageView
         // set on-click listener
         img9.setOnClickListener {
-            startActivity(Intent(this, MapsActivity::class.java))
+            startActivity(Intent(this, MapWithSearchbar::class.java))
 
             Toast.makeText(this@Dashboard, "Map", Toast.LENGTH_SHORT).show()
         }

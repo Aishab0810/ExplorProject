@@ -74,8 +74,13 @@ dependencies {
     // for adding cardview
     implementation 'androidx.cardview:cardview:1.0.0'
 
-    //okhttp
-    implementation 'com.squareup.okhttp3:okhttp:4.1.0'
+    // For Map fragment
+
+    implementation 'com.google.android.libraries.places:places:2.4.0'
+
+// To make a call to for getting Coordinates response from a Web URL
+
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
 
     //gson library
     implementation 'com.google.code.gson:gson:2.8.7'
@@ -94,6 +99,9 @@ dependencies {
 //coroutine image loader
     implementation("io.coil-kt:coil:1.1.1")
 
+    //florent github permission
+    implementation 'com.github.florent37:runtime-permission-kotlin:1.1.2'
+
 
 //    //navigation components
 //    implementation "androidx.navigation:navigation-fragment-ktx:2.4.1"
@@ -102,3 +110,4 @@ dependencies {
 }
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
+

@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.exploraholic.Adapter.CustomAdapter
 import com.example.exploraholic.DataClass.ItemsViewModel
 import com.example.exploraholic.MainScreens.LoginScreen
-import com.example.exploraholic.MapScreen.MapsActivity
+import com.example.exploraholic.MapScreen.MapWithSearchbar
 import com.example.exploraholic.R
 
 class Hospitals : AppCompatActivity() {
@@ -62,7 +62,7 @@ class Hospitals : AppCompatActivity() {
         val location1 = findViewById(R.id.location) as ImageView
         // set on-click listener
         location1.setOnClickListener {
-            startActivity(Intent(this, MapsActivity::class.java))
+            startActivity(Intent(this, MapWithSearchbar::class.java))
             Toast.makeText(this@Hospitals, "Map", Toast.LENGTH_SHORT).show()
         }
 

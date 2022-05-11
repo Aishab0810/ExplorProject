@@ -1,10 +1,8 @@
 package com.example.exploraholic.MapScreen
 
-import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.exploraholic.GoogleMapDTO
 import com.example.exploraholic.R
 import com.example.exploraholic.databinding.ActivityMapsBinding
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -13,10 +11,6 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.gms.maps.model.PolylineOptions
-import com.google.gson.Gson
-import okhttp3.OkHttpClient
-import okhttp3.Request
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -66,12 +60,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             val location7 = LatLng(18.505007, 73.518105)
             mMap.addMarker(MarkerOptions().position(location7).title("Mulashi"))
 
-            Log.d("GoogleMap", "before URL")
-            val URL = getDirectionURL(location1, location3)
-            Log.d("GoogleMap", "URL : $URL")
-            GetDirection(URL).execute()
-
-        })
+        } )
     }
     fun getDirectionURL(origin:LatLng,dest:LatLng) : String{
         return "https://maps.googleapis.com/maps/api/directions/json?origin=${origin.latitude},${origin.longitude}&destination=${dest.latitude},${dest.longitude}&sensor=false&mode=driving"
@@ -121,8 +110,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.addMarker(MarkerOptions().position(Mulashi).title("Marker in Mulashi"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(Mulashi))
 
-        val URL = getDirectionURL(Pune, Mahabaleshwar)
-        GetDirection(URL).execute()
 
 //        val startPoint = Location("Pune")
 //        startPoint.setLatitude(18.5204)
@@ -135,82 +122,5 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 //        val distance: Float = startPoint.distanceTo(endPoint)
 
     }
-    private inner class GetDirection(val url : String) : AsyncTask<Void,Void,List<List<LatLng>>>() {
-        override fun doInBackground(vararg p0: Void?): List<List<LatLng>> {
-            val client = OkHttpClient()
-            val request = Request.Builder().url(url).build()
-            val response = client.newCall(request).execute()
-            val data = response.body!!.string()
-            Log.d("GoogleMap" , " data : $data")
-            val result =  ArrayList<List<LatLng>>()
-            try{
-                val respObj = Gson().fromJson(data,GoogleMapDTO::class.java)
 
-                val path = ArrayList<LatLng>()
-
-                for (i in 0..(respObj.routes[0].legs[0].steps.size-1)){
-//                    var startLatLng = LatLng(respObj.routes[0].legs[0].steps[i].start_location.lat.toDouble(),
-//                        respObj.routes[0].legs[0].steps[i].start_location.lng.toDouble())
-//                    path.add(startLatLng)
-//                    var endLatLng = LatLng(respObj.routes[0].legs[0].steps[i].end_location.lat.toDouble(),
-//                        respObj.routes[0].legs[0].steps[i].end_location.lng.toDouble())
-                    path.addAll(decodePolyLine(respObj.routes[0].legs[0].steps[i].polyLine.points))
-                }
-                result.add(path)
-
-            }catch (e: Exception){
-                e.printStackTrace()
-            }
-            return result
-        }
-
-        override fun onPostExecute(result: List<List<LatLng>>) {
-            val lineoption = PolylineOptions()
-            for (i in result.indices){
-                lineoption.addAll(result[i])
-                lineoption.width(10f)
-//                lineoption.color(Color.BLUE)
-                lineoption.geodesic(true)
-            }
-            mMap.addPolyline(lineoption)
-        }
-    }
-    public fun decodePolyLine(encoded: String): List<LatLng>{
-
-        val poly =  ArrayList<LatLng>()
-        var index = 0
-        val len = encoded.length
-        var lat = 0
-        var lng = 0
-
-        while (index < len){
-            var b: Int
-            var shift = 0
-            var result = 0
-            do {
-                b = encoded[index++].toInt() - 63
-                result = result or (b and 0x1f shl shift)
-                shift += 5
-            }
-            while (b>= 0x20)
-            val dlat = if (result and 1 != 0) (result shr 1).inv() else result shr 1
-            lat += dlat
-
-            shift = 0
-            result = 0
-            do {
-                b = encoded[index++].toInt() - 63
-                result = result or (b and 0x1f shl shift)
-                shift += 5
-            }
-            while (b>= 0x20)
-            val dlng = if (result and 1 != 0) (result shr 1).inv() else result shr 1
-            lng += dlng
-
-            val latLng = LatLng((lat.toDouble() / 1E5),(lng.toDouble() / 1E5))
-            poly.add(latLng)
-
-        }
-        return poly
-    }
 }
