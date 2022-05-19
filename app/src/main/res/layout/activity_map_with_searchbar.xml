@@ -32,6 +32,13 @@
                 android:text="Search"
         />
 
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/B_clear"
+                android:layout_marginEnd="2dp"
+                android:text="Clear"
+        />
+
     </LinearLayout>
 
     <androidx.cardview.widget.CardView

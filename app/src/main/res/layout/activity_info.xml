@@ -24,7 +24,8 @@
               android:gravity="center"
               android:textStyle="bold"
               android:textSize="30sp"
-              android:textColor="@color/purple_700"
+              android:textColor="#111E65"
+              android:background="#879BEF"
               android:layout_marginTop="400sp"/>
 
     <ImageView
@@ -32,8 +33,9 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_baseline_home_24"
+            android:layout_marginLeft="310dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="320dp"/>
+    />
 
     <ImageView
             android:id="@+id/log_out"
@@ -57,10 +59,11 @@
             android:id="@+id/layoutid"
             android:layout_height="match_parent"
             android:scrollbars="horizontal"
+            android:layout_below="@+id/toolbar1"
     >
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:layout_marginTop="300dp"
+                      android:layout_marginTop="240dp"
                       android:orientation="horizontal"
         >
 
@@ -70,7 +73,8 @@
                     android:layout_height="100dp"
                     android:layout_marginStart="8dp"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/mdam"/>
+                    android:elevation="20dp"
+                    app:srcCompat="@drawable/frt"/>
 
             <ImageView
                     android:id="@+id/imageView9"
@@ -78,7 +82,8 @@
                     android:layout_height="100dp"
                     android:layout_marginStart="8dp"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/lfort"/>
+                    android:elevation="20dp"
+                    app:srcCompat="@drawable/wtrfl1"/>
 
             <ImageView
                     android:id="@+id/imageView10"
@@ -86,7 +91,8 @@
                     android:layout_height="100dp"
                     android:layout_marginStart="8dp"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/kdam"/>
+                    android:elevation="20dp"
+                    app:srcCompat="@drawable/wtrfl"/>
 
             <ImageView
                     android:id="@+id/imageView11"
@@ -94,7 +100,8 @@
                     android:layout_height="100dp"
                     android:layout_marginStart="8dp"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/mhill"/>
+                    android:elevation="20dp"
+                    app:srcCompat="@drawable/tighill"/>
 
             <ImageView
                     android:id="@+id/imageView12"
@@ -102,6 +109,7 @@
                     android:layout_height="100dp"
                     android:layout_marginStart="8dp"
                     android:scaleType="fitXY"
+                    android:elevation="20dp"
                     app:srcCompat="@drawable/rfort"/>
 
             <ImageView
@@ -110,7 +118,17 @@
                     android:layout_height="100dp"
                     android:layout_marginStart="8dp"
                     android:scaleType="fitXY"
+                    android:elevation="20dp"
                     app:srcCompat="@drawable/tighill"/>
+
+            <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="8dp"
+                    android:scaleType="fitXY"
+                    android:elevation="20dp"
+                    app:srcCompat="@drawable/mdam"/>
 
         </LinearLayout>
     </HorizontalScrollView>
