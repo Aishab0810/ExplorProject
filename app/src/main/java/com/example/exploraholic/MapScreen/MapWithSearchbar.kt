@@ -6,7 +6,6 @@ import android.content.pm.PackageManager
 import android.location.Address
 import android.location.Geocoder
 import android.location.Location
-import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -27,16 +26,9 @@ import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.gms.maps.model.PolylineOptions
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
-import org.json.JSONObject
-import java.io.BufferedReader
 import java.io.IOException
-import java.io.InputStream
-import java.io.InputStreamReader
-import java.net.HttpURLConnection
-import java.net.URL
 
 @Suppress("DEPRECATION")
 class MapWithSearchbar : AppCompatActivity(), OnMapReadyCallback
@@ -48,6 +40,7 @@ class MapWithSearchbar : AppCompatActivity(), OnMapReadyCallback
     private val MAP_VIEW_BUNDLE_KEY = "MapViewBundleKey"
 
     private lateinit var search : Button
+    private lateinit var clear : Button
 
     private val DEFAULT_ZOOM = 15f
     lateinit var tvCurrentAddress: TextView
@@ -94,6 +87,8 @@ class MapWithSearchbar : AppCompatActivity(), OnMapReadyCallback
 
         search = findViewById<Button>(R.id.B_search)
 
+        clear = findViewById<Button>(R.id.B_clear)
+
         askPermissionLocation()
 
         var mapViewBundle: Bundle? = null
@@ -106,6 +101,11 @@ class MapWithSearchbar : AppCompatActivity(), OnMapReadyCallback
 
         search.setOnClickListener {
             searchArea()
+        }
+
+        clear.setOnClickListener {
+            mapView.onCreate(mapViewBundle)
+            mapView.getMapAsync(this)
         }
     }
 
@@ -162,135 +162,135 @@ class MapWithSearchbar : AppCompatActivity(), OnMapReadyCallback
 
                             tvCurrentAddress!!.setText("Distance = $s KM")
 
-                        //Getting URL to the Google Directions API
-                        val url : String =
-                            getDirectionsUrl(origin!!.getPosition(), destination!!.getPosition())!!
+//                        //Getting URL to the Google Directions API
+//                        val url : String =
+//                            getDirectionsUrl(origin!!.getPosition(), destination!!.getPosition())!!
 
-                        val downloadTask: DownloadTask = DownloadTask()
-
-                        //start downloading json data from Google Directions API
-                        downloadTask.execute(url)
+//                        val downloadTask: DownloadTask = DownloadTask()
+//
+//                        //start downloading json data from Google Directions API
+//                        downloadTask.execute(url)
                     }
                 }
             }
         }
 
-            inner class DownloadTask :
-                AsyncTask<String?, Void?, String>() {
+//            inner class DownloadTask :
+//                AsyncTask<String?, Void?, String>() {
+//
+//                    override fun onPostExecute(result:String){
+//                        super.onPostExecute(result)
+//                        val parserTask = ParserTask()
+//                        parserTask.execute(result)
+//                    }
+//
+//                override fun doInBackground(vararg url: String?): String {
+//                    var data = ""
+//                    try {
+//                        data = downloadUrl(url[0].toString()).toString()
+//                    } catch (e: java.lang.Exception){
+//                        Log.d("Background Task", e.toString())
+//                    }
+//                    return data
+//                }
+//            }
 
-                    override fun onPostExecute(result:String){
-                        super.onPostExecute(result)
-                        val parserTask = ParserTask()
-                        parserTask.execute(result)
-                    }
-
-                override fun doInBackground(vararg url: String?): String {
-                    var data = ""
-                    try {
-                        data = downloadUrl(url[0].toString()).toString()
-                    } catch (e: java.lang.Exception){
-                        Log.d("Background Task", e.toString())
-                    }
-                    return data
-                }
-            }
-
-        /**
-         * A class to parse the JSON Format
-         */
-        @SuppressLint("StaticFieldLeak")
-        inner class ParserTask :
-        AsyncTask<String?, Int?, List<List<HashMap<String, String>>>?>(){
-            //Parsing the data in non-ui thread
-            override fun doInBackground(vararg jsonData: String?): List<List<HashMap<String, String>>>? {
-                val jObject: JSONObject
-                val routes : List<List<HashMap<String, String>>>?=
-                    null
-                try {
-                    jObject = JSONObject(jsonData[0])
-                    val parser = DataParser()
-                    //routes = Parser.parse(jObject)
-                }catch (e: java.lang.Exception){
-                    e.printStackTrace()
-                }
-                return routes
-            }
+//        /**
+//         * A class to parse the JSON Format
+//         */
+//        @SuppressLint("StaticFieldLeak")
+//        inner class ParserTask :
+//        AsyncTask<String?, Int?, List<List<HashMap<String, String>>>?>(){
+//            //Parsing the data in non-ui thread
+//            override fun doInBackground(vararg jsonData: String?): List<List<HashMap<String, String>>>? {
+//                val jObject: JSONObject
+//                val routes : List<List<HashMap<String, String>>>?=
+//                    null
+//                try {
+//                    jObject = JSONObject(jsonData[0])
+//                    val parser = DataParser()
+//                    //routes = Parser.parse(jObject)
+//                }catch (e: java.lang.Exception){
+//                    e.printStackTrace()
+//                }
+//                return routes
+//            }
 
 
-        override fun onPostExecute(result: List<List<HashMap<String, String>>>?){
-            val points = ArrayList<LatLng?>()
-            val lineOptions = PolylineOptions()
-            for (i in result!!.indices){
-                val path =
-                    result[i]
-                for (j in path.indices){
-                    val point = path[j]
-                    val lat = point["lat"]!!.toDouble()
-                    val lng = point["lng"]!!.toDouble()
-                    val position = LatLng(lat, lng)
-                    points.add(position)
-                }
-                lineOptions.addAll(points)
-                lineOptions.width(8f)
-//                lineOptions.color(color.RED)
-                lineOptions.geodesic(true)
-            }
-    //drawing polyline in the google map for the i-th route
-            if (points.size != 0) mMap!!.addPolyline(lineOptions)
-        }
-    }
+//        override fun onPostExecute(result: List<List<HashMap<String, String>>>?){
+//            val points = ArrayList<LatLng?>()
+//            val lineOptions = PolylineOptions()
+//            for (i in result!!.indices){
+//                val path =
+//                    result[i]
+//                for (j in path.indices){
+//                    val point = path[j]
+//                    val lat = point["lat"]!!.toDouble()
+//                    val lng = point["lng"]!!.toDouble()
+//                    val position = LatLng(lat, lng)
+//                    points.add(position)
+//                }
+//                lineOptions.addAll(points)
+//                lineOptions.width(8f)
+////                lineOptions.color(color.RED)
+//                lineOptions.geodesic(true)
+//            }
+//    //drawing polyline in the google map for the i-th route
+//            if (points.size != 0) mMap!!.addPolyline(lineOptions)
+//        }
+//    }
 
-        /**
-         * A method to download json data from url
-         */
-            @Throws(IOException::class)
-            private fun downloadUrl(strUrl: String): String? {
-                var data = ""
-                var iStream: InputStream? = null
-                var urlConnection: HttpURLConnection? = null
-                try {
-                    val url = URL(strUrl)
-                    urlConnection = url.openConnection() as HttpURLConnection
-                    urlConnection.connect()
-                    iStream = urlConnection!!.inputStream
-                    val br =
-                        BufferedReader(InputStreamReader(iStream))
-                    val sb = StringBuffer()
-                    var line: String? = ""
-                    while (br.readLine().also { line = it } != null ){
-                        sb.append(line)
-                    }
-                    data = sb.toString()
-                    br.close()
-                }
-                catch (e: java.lang.Exception){
-                    Log.d("Exception", e.toString())
-                }finally {
-                    iStream!!.close()
-                    urlConnection!!.disconnect()
-                }
-            return data
-            }
+//        /**
+//         * A method to download json data from url
+//         */
+//            @Throws(IOException::class)
+//            private fun downloadUrl(strUrl: String): String? {
+//                var data = ""
+//                var iStream: InputStream? = null
+//                var urlConnection: HttpURLConnection? = null
+//                try {
+//                    val url = URL(strUrl)
+//                    urlConnection = url.openConnection() as HttpURLConnection
+//                    urlConnection.connect()
+//                    iStream = urlConnection!!.inputStream
+//                    val br =
+//                        BufferedReader(InputStreamReader(iStream))
+//                    val sb = StringBuffer()
+//                    var line: String? = ""
+//                    while (br.readLine().also { line = it } != null ){
+//                        sb.append(line)
+//                    }
+//                    data = sb.toString()
+//                    br.close()
+//                }
+//                catch (e: java.lang.Exception){
+//                    Log.d("Exception", e.toString())
+//                }finally {
+//                    iStream!!.close()
+//                    urlConnection!!.disconnect()
+//                }
+//            return data
+//            }
 
-        private fun getDirectionsUrl(origin: LatLng, dest: LatLng): String {
-            //origin of route
-            val str_origin = "origin=" + origin.latitude + "," + origin.longitude
-
-            //destination of route
-            val str_dest = "destination" + dest.latitude + "," + dest.longitude
-
-            //setting transportation mode
-            val mode = "mode = driving"
-
-            //building the parameters to the web service
-            val parameters = "$str_origin&$str_dest&$mode"
-
-            //output format
-            val output = "json"
-
-            //building the url to the web service
-            return "https://maps.googleapis.com/maps/api/directions/$output?$parameters&key=AIzaSyC1vVfNqEVozt9EgNtvUN9DSEcKKCxKVZI"
-        }
+//        private fun getDirectionsUrl(origin: LatLng, dest: LatLng): String {
+//            //origin of route
+//            val str_origin = "origin=" + origin.latitude + "," + origin.longitude
+//
+//            //destination of route
+//            val str_dest = "destination" + dest.latitude + "," + dest.longitude
+//
+//            //setting transportation mode
+//            val mode = "mode = driving"
+//
+//            //building the parameters to the web service
+//            val parameters = "$str_origin&$str_dest&$mode"
+//
+//            //output format
+//            val output = "json"
+//
+//            //building the url to the web service
+//            return "https://maps.googleapis.com/maps/api/directions/$output?$parameters&key=AIzaSyC1vVfNqEVozt9EgNtvUN9DSEcKKCxKVZI"
+//        }
 
         public override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
