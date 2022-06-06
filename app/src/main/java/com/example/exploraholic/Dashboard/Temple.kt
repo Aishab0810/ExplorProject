@@ -7,17 +7,20 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.exploraholic.Adapter.CustomAdapter
 import com.example.exploraholic.DataClass.ItemsViewModel
 import com.example.exploraholic.MainScreens.LoginScreen
 import com.example.exploraholic.MapScreen.MapWithSearchbar
 import com.example.exploraholic.R
+import pl.droidsonroids.gif.GifImageView
 
 class Temple : AppCompatActivity() {
 
     private lateinit var location1: ImageView
     private lateinit var logout1: ImageView
     private lateinit var homee1: ImageView
+    private lateinit var temple: GifImageView
 
     private lateinit var newRecyclerView: RecyclerView
     private lateinit var newArrayList: ArrayList<ItemsViewModel>
@@ -28,8 +31,8 @@ class Temple : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_temple)
 
-        imageId = arrayOf(R.drawable.temple, R.drawable.temple, R.drawable.temple,R.drawable.temple,R.drawable.temple,
-            R.drawable.temple,R.drawable.temple,R.drawable.temple,R.drawable.temple,R.drawable.temple,
+        imageId = arrayOf(R.drawable.t1, R.drawable.t2, R.drawable.t3,R.drawable.t4,R.drawable.t5,
+            R.drawable.t6,R.drawable.t7,R.drawable.t8,R.drawable.t9,R.drawable.t10,
         )
         heading = arrayOf("Shri Chattushringi Devi Mandir, Gr Floor, Seva Samiti Building, Senapati Bapat Rd, Chattushringi, Pune, Maharashtra 411016",
             "Shreemant Dagdusheth Halwai Ganpati Mandir, Ganpati Bhavan, Chhatrapati Shivaji Maharaj Rd, Mehunpura, Budhwar Peth, Pune,411002",
@@ -58,6 +61,11 @@ class Temple : AppCompatActivity() {
         location1 = findViewById(R.id.location)
         logout1 = findViewById(R.id.log_out)
         homee1 = findViewById(R.id.homee)
+        temple = findViewById(R.id.templeg)
+
+        val url =
+            "https://firebasestorage.googleapis.com/v0/b/exploraholic-a1daf.appspot.com/o/Gif's%2Ftempleg.gif?alt=media&token=daba55c7-b23d-4496-a478-bcdeb08bfaa1"
+        Glide.with(applicationContext).load(url).into(temple)
 
         val location1 = findViewById(R.id.location) as ImageView
         // set on-click listener

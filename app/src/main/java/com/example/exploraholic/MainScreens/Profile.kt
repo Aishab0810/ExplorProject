@@ -6,7 +6,7 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
+import android.provider.MediaStore.ACTION_IMAGE_CAPTURE
 import android.provider.Settings
 import android.view.Window
 import android.widget.Toast
@@ -43,24 +43,14 @@ class Profile : AppCompatActivity() {
     private lateinit var imageUri : Uri
     private lateinit var dialog: Dialog
 
-
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
-
         auth = FirebaseAuth.getInstance()
         val uid =  auth.currentUser?.uid
         databaseReference = FirebaseDatabase.getInstance().getReference("Users")
-
-
 
         binding.saveBtn.setOnClickListener {
 
@@ -73,55 +63,38 @@ class Profile : AppCompatActivity() {
             if(uid != null ){
 
                 databaseReference.child(uid).setValue(user).addOnCompleteListener {
-
-                    if (it.isSuccessful){
-
-                        uploadProfilePic()
-
-                    }else{
+                        if (it.isSuccessful){
+                            uploadProfilePic()
+                        }else{
                         hideProgressBar()
                         Toast.makeText(this@Profile,"Failed to update profile",Toast.LENGTH_SHORT).show()
                     }
-
-
                 }
-
             }
-
-
-
         }
-
-
-
 
         //when you click on the Profileimage
         binding.profileImage.setOnClickListener {
-
-
             val pictureDialog = AlertDialog.Builder(this)
             pictureDialog.setTitle("Select Action")
             val pictureDialogItem = arrayOf("Select photo from Gallery",
                 "Capture photo from Camera")
             pictureDialog.setItems(pictureDialogItem) { dialog, which ->
-
                 when (which) {
                     0 -> gallery()
                     1 -> camera()
                 }
             }
-
             pictureDialog.show()
         }
-
     }
 
     private fun uploadProfilePic() {
-        imageUri = Uri.parse("android.resource://$packageName/${R.drawable.person}")
+        imageUri = Uri.parse("android.resource://$packageName/${R.drawable.proficon}")
         storageReference = FirebaseStorage.getInstance().getReference( "Users/"+auth.currentUser?.uid+"jpg")
         storageReference.putFile(imageUri).addOnSuccessListener {
             hideProgressBar()
-            Toast.makeText(this@Profile,"Profile successfuly uploaded",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@Profile,"Profile successfully uploaded",Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, Dashboard::class.java))
 
         }.addOnFailureListener {
@@ -204,8 +177,8 @@ class Profile : AppCompatActivity() {
 
 
     private fun camera() {
-        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        startActivityForResult(intent, CAMERA_REQUEST_CODE)
+        val intent = Intent(ACTION_IMAGE_CAPTURE)
+        startActivityForResult(intent, this.CAMERA_REQUEST_CODE)
     }
 
 

@@ -1,5 +1,6 @@
 package com.example.exploraholic.MapScreen
 
+import android.location.Location
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -110,6 +111,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.addMarker(MarkerOptions().position(Mulashi).title("Marker in Mulashi"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(Mulashi))
 
+        val results = FloatArray(1)
+        Location.distanceBetween(18.5204, 73.8567,
+            17.921721, 73.655602, results)
+        val distance = results[0]
+
 
 //        val startPoint = Location("Pune")
 //        startPoint.setLatitude(18.5204)
@@ -122,5 +128,26 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 //        val distance: Float = startPoint.distanceTo(endPoint)
 
     }
+
+//    private fun distance(lat1: Double, lon1: Double, lat2: Double, lon2: Double): Double {
+//        val theta = lon1 - lon2
+//        var dist = (Math.sin(deg2rad(lat1))
+//                * Math.sin(deg2rad(lat2))
+//                + (Math.cos(deg2rad(lat1))
+//                * Math.cos(deg2rad(lat2))
+//                * Math.cos(deg2rad(theta))))
+//        dist = Math.acos(dist)
+//        dist = rad2deg(dist)
+//        dist = dist * 60 * 1.1515
+//        return dist
+//    }
+//
+//    private fun deg2rad(deg: Double): Double {
+//        return deg * Math.PI / 180.0
+//    }
+//
+//    private fun rad2deg(rad: Double): Double {
+//        return rad * 180.0 / Math.PI
+//    }
 
 }

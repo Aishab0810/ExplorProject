@@ -7,17 +7,20 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.exploraholic.Adapter.CustomAdapter
 import com.example.exploraholic.DataClass.ItemsViewModel
 import com.example.exploraholic.MainScreens.LoginScreen
 import com.example.exploraholic.MapScreen.MapWithSearchbar
 import com.example.exploraholic.R
+import pl.droidsonroids.gif.GifImageView
 
 class Hotel : AppCompatActivity() {
 
     private lateinit var location1: ImageView
     private lateinit var logout1: ImageView
     private lateinit var homee1: ImageView
+    private lateinit var hotel: GifImageView
 
     private lateinit var newRecyclerView: RecyclerView
     private lateinit var newArrayList: ArrayList<ItemsViewModel>
@@ -28,8 +31,8 @@ class Hotel : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hotel)
 
-        imageId = arrayOf(R.drawable.food, R.drawable.food, R.drawable.food,R.drawable.food,R.drawable.food,
-            R.drawable.food,R.drawable.food,R.drawable.food,R.drawable.food,R.drawable.food,
+        imageId = arrayOf(R.drawable.h1, R.drawable.h2, R.drawable.h3,R.drawable.h4,R.drawable.h5,
+            R.drawable.h6,R.drawable.h7,R.drawable.h8,R.drawable.h9,R.drawable.h10,
         )
         heading = arrayOf("Marriott Suites,  81, Mundhwa Rd, Fatima Nagar, Koregaon Park Annexe, Mundhwa, Pune, Maharashtra 411036",
             "Hotel Hyatt, Adjacent To Aga Khan Palace, 88, Nagar Rd, Kalyani Nagar, Pune, Maharashtra 411006",
@@ -58,6 +61,11 @@ class Hotel : AppCompatActivity() {
         location1 = findViewById(R.id.location)
         logout1 = findViewById(R.id.log_out)
         homee1 = findViewById(R.id.homee)
+        hotel = findViewById(R.id.hotelg)
+
+        val url =
+            "https://firebasestorage.googleapis.com/v0/b/exploraholic-a1daf.appspot.com/o/Gif's%2Fhotelg.gif?alt=media&token=5a10ee92-4610-48ea-9e15-0051eac5cb37"
+        Glide.with(applicationContext).load(url).into(hotel)
 
         val location1 = findViewById(R.id.location) as ImageView
         // set on-click listener

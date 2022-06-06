@@ -7,17 +7,20 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.exploraholic.Adapter.CustomAdapter
 import com.example.exploraholic.DataClass.ItemsViewModel
 import com.example.exploraholic.MainScreens.LoginScreen
 import com.example.exploraholic.MapScreen.MapWithSearchbar
 import com.example.exploraholic.R
+import pl.droidsonroids.gif.GifImageView
 
 class Hospitals : AppCompatActivity() {
 
     private lateinit var location1: ImageView
     private lateinit var logout1: ImageView
     private lateinit var homee1: ImageView
+    private lateinit var hospital: GifImageView
 
     private lateinit var newRecyclerView: RecyclerView
     private lateinit var newArrayList: ArrayList<ItemsViewModel>
@@ -28,8 +31,9 @@ class Hospitals : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hospitals)
 
-        imageId = arrayOf(R.drawable.hospital, R.drawable.hospital, R.drawable.hospital,R.drawable.hospital,R.drawable.hospital,
-            R.drawable.hospital,R.drawable.hospital,R.drawable.hospital,R.drawable.hospital,R.drawable.hospital,
+        imageId = arrayOf(
+            R.drawable.hp1, R.drawable.hp2, R.drawable.hp3, R.drawable.hp4, R.drawable.hp5,
+            R.drawable.hp6, R.drawable.hp7, R.drawable.hp8, R.drawable.hp9, R.drawable.hp10,
         )
         heading = arrayOf("Jehangir Hospital,32, Sasoon Rd, Opposite Railway Station, Central Excise Colony, Sangamvadi, Pune 411001",
             "Sahyadri Hospital,near Hermes Heritage Phase II, Hermes Heritage Society Phase 1, Shastrinagar, Yerawada, Pune 411006",
@@ -58,6 +62,11 @@ class Hospitals : AppCompatActivity() {
         location1 = findViewById(R.id.location)
         logout1 = findViewById(R.id.log_out)
         homee1 = findViewById(R.id.homee)
+        hospital = findViewById(R.id.hospg)
+
+        val url =
+            "https://firebasestorage.googleapis.com/v0/b/exploraholic-a1daf.appspot.com/o/Gif's%2Fhospg.gif?alt=media&token=b4f5f28f-6b8f-4dd1-a6cf-8da2ed79cd6e"
+        Glide.with(applicationContext).load(url).into(hospital)
 
         val location1 = findViewById(R.id.location) as ImageView
         // set on-click listener
@@ -80,6 +89,8 @@ class Hospitals : AppCompatActivity() {
             Toast.makeText(this@Hospitals, "Homepage", Toast.LENGTH_SHORT).show()
         }
     }
+
+
 
     private fun getUserData() {
 

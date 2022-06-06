@@ -7,17 +7,20 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.exploraholic.Adapter.CustomAdapter
 import com.example.exploraholic.DataClass.ItemsViewModel
 import com.example.exploraholic.MainScreens.LoginScreen
 import com.example.exploraholic.MapScreen.MapWithSearchbar
 import com.example.exploraholic.R
+import pl.droidsonroids.gif.GifImageView
 
 class Pmpml : AppCompatActivity() {
 
     private lateinit var location1: ImageView
     private lateinit var logout1: ImageView
     private lateinit var homee1: ImageView
+    private lateinit var bus: GifImageView
 
     private lateinit var newRecyclerView: RecyclerView
     private lateinit var newArrayList: ArrayList<ItemsViewModel>
@@ -28,8 +31,8 @@ class Pmpml : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pmpml)
 
-        imageId = arrayOf(R.drawable.bus, R.drawable.bus, R.drawable.bus,R.drawable.bus,R.drawable.bus,
-            R.drawable.bus,R.drawable.bus,R.drawable.bus,R.drawable.bus,R.drawable.bus,
+        imageId = arrayOf(R.drawable.b1, R.drawable.b2, R.drawable.b3,R.drawable.b4,R.drawable.b5,
+            R.drawable.b6,R.drawable.b7,R.drawable.b8,R.drawable.b9,R.drawable.b10,
         )
         heading = arrayOf("301- Bhosari to Pimprigaon \n Morning 5.10 AM Two buses time between 0.15 Hours. Night at 10.35 Pm.",
             "80 - Garden city to MANAPA \n Morning 7.00 AM Two buses time between 0.15 Hours. Night at 10.00 Pm.",
@@ -58,6 +61,11 @@ class Pmpml : AppCompatActivity() {
         location1 = findViewById(R.id.location)
         logout1 = findViewById(R.id.log_out)
         homee1 = findViewById(R.id.homee)
+        bus = findViewById(R.id.busg)
+
+        val url =
+            "https://firebasestorage.googleapis.com/v0/b/exploraholic-a1daf.appspot.com/o/Gif's%2Fbusg.gif?alt=media&token=3420b8a4-a87d-49f3-8b60-9a7a5fe5abce"
+        Glide.with(applicationContext).load(url).into(bus)
 
         val location1 = findViewById(R.id.location) as ImageView
         // set on-click listener

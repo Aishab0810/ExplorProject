@@ -49,7 +49,6 @@
             android:id="@+id/histg"
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:src="@drawable/roadtrip"
             android:layout_marginTop="-30dp"
     />
 
@@ -73,8 +72,7 @@
                     android:layout_height="100dp"
                     android:layout_marginStart="8dp"
                     android:scaleType="fitXY"
-                    android:elevation="20dp"
-                    app:srcCompat="@drawable/frt"/>
+                    android:elevation="20dp"/>
 
             <ImageView
                     android:id="@+id/imageView9"
@@ -83,7 +81,7 @@
                     android:layout_marginStart="8dp"
                     android:scaleType="fitXY"
                     android:elevation="20dp"
-                    app:srcCompat="@drawable/wtrfl1"/>
+            />
 
             <ImageView
                     android:id="@+id/imageView10"
@@ -91,8 +89,7 @@
                     android:layout_height="100dp"
                     android:layout_marginStart="8dp"
                     android:scaleType="fitXY"
-                    android:elevation="20dp"
-                    app:srcCompat="@drawable/wtrfl"/>
+                    android:elevation="20dp"/>
 
             <ImageView
                     android:id="@+id/imageView11"
@@ -100,8 +97,7 @@
                     android:layout_height="100dp"
                     android:layout_marginStart="8dp"
                     android:scaleType="fitXY"
-                    android:elevation="20dp"
-                    app:srcCompat="@drawable/tighill"/>
+                    android:elevation="20dp"/>
 
             <ImageView
                     android:id="@+id/imageView12"
@@ -109,8 +105,7 @@
                     android:layout_height="100dp"
                     android:layout_marginStart="8dp"
                     android:scaleType="fitXY"
-                    android:elevation="20dp"
-                    app:srcCompat="@drawable/rfort"/>
+                    android:elevation="20dp"/>
 
             <ImageView
                     android:id="@+id/imageView13"
@@ -118,8 +113,7 @@
                     android:layout_height="100dp"
                     android:layout_marginStart="8dp"
                     android:scaleType="fitXY"
-                    android:elevation="20dp"
-                    app:srcCompat="@drawable/tighill"/>
+                    android:elevation="20dp"/>
 
             <ImageView
                     android:id="@+id/imageView14"
@@ -127,8 +121,7 @@
                     android:layout_height="100dp"
                     android:layout_marginStart="8dp"
                     android:scaleType="fitXY"
-                    android:elevation="20dp"
-                    app:srcCompat="@drawable/mdam"/>
+                    android:elevation="20dp"/>
 
         </LinearLayout>
     </HorizontalScrollView>

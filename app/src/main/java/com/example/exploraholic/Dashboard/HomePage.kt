@@ -13,6 +13,7 @@ import com.example.exploraholic.Fragments.Dams
 import com.example.exploraholic.Fragments.Forts
 import com.example.exploraholic.Fragments.HillStations
 import com.example.exploraholic.MainScreens.LoginScreen
+import com.example.exploraholic.MapScreen.MapsActivity
 import com.example.exploraholic.R
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -24,6 +25,7 @@ class HomePage : AppCompatActivity() {
     private lateinit var appPagerAdapter: AppPagerAdapter
     private lateinit var imageView: ImageView
     private lateinit var homeimg1: ImageView
+    private lateinit var mapimg1: ImageView
 
     private val titles = arrayListOf("Hillstations ", "Forts ", "Dams ")  //for multiple list we require titles
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,6 +61,13 @@ class HomePage : AppCompatActivity() {
         homeimg1.setOnClickListener {
             startActivity(Intent(this, Dashboard::class.java))
             Toast.makeText(this@HomePage, "HomePage", Toast.LENGTH_SHORT).show()
+        }
+
+        val mapimg1 = findViewById(R.id.map) as ImageView
+        // set on-click listener
+        mapimg1.setOnClickListener {
+            startActivity(Intent(this, MapsActivity::class.java))
+            Toast.makeText(this@HomePage, "Map", Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -7,29 +7,34 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.exploraholic.Adapter.CustomAdapter
 import com.example.exploraholic.DataClass.ItemsViewModel
 import com.example.exploraholic.MainScreens.LoginScreen
 import com.example.exploraholic.MapScreen.MapWithSearchbar
 import com.example.exploraholic.R
+import pl.droidsonroids.gif.GifImageView
 
 class Cafe : AppCompatActivity() {
 
     private lateinit var location1: ImageView
     private lateinit var logout1: ImageView
     private lateinit var homee1: ImageView
+    private lateinit var cafe: GifImageView
 
     private lateinit var newRecyclerView: RecyclerView
     private lateinit var newArrayList: ArrayList<ItemsViewModel>
     lateinit var imageId: Array<Int>
     lateinit var heading: Array<String>
 
+//    val imageRef = Firebase.storage.reference
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cafe)
 
-        imageId = arrayOf(R.drawable.cafe, R.drawable.cafe, R.drawable.cafe,R.drawable.cafe,R.drawable.cafe,
-            R.drawable.cafe,R.drawable.cafe,R.drawable.cafe,R.drawable.cafe,R.drawable.cafe,
+        imageId = arrayOf(R.drawable.c1, R.drawable.c2, R.drawable.c3,R.drawable.c4,R.drawable.c5,
+            R.drawable.c6,R.drawable.c7,R.drawable.c8,R.drawable.c9,R.drawable.c10,
         )
             heading = arrayOf(
                 "CAFE BEANS, near AADITYA GARDAN CITY,\n Aditya Garden City, Warje,\n Pune, Maharashtra 411058",
@@ -60,6 +65,11 @@ class Cafe : AppCompatActivity() {
         location1 = findViewById(R.id.location)
         logout1 = findViewById(R.id.log_out)
         homee1 = findViewById(R.id.homee)
+        cafe = findViewById(R.id.cafeg)
+
+        val url =
+            "https://firebasestorage.googleapis.com/v0/b/exploraholic-a1daf.appspot.com/o/Gif's%2Fcafeg.gif?alt=media&token=34b87c21-c982-4d56-bc36-c8f7d300d638"
+        Glide.with(applicationContext).load(url).into(cafe)
 
         val location1 = findViewById(R.id.location) as ImageView
         // set on-click listener
@@ -93,4 +103,14 @@ class Cafe : AppCompatActivity() {
         newRecyclerView.adapter = CustomAdapter(newArrayList)
 
     }
+
+//    private fun listFiles()= CoroutineScope(Dispatchers.IO).launch {
+//        try {
+//            val images = imageRef.child("images/").listAll().await()
+//        }catch (e:Exception){
+//            withContext(Dispatchers.Main){
+//                Toast.makeText(this@Cafe, e.message, Toast.LENGTH_LONG).show()
+//            }
+//        }
+//    }
 }

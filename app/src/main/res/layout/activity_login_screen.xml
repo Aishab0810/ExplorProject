@@ -14,7 +14,6 @@
         tools:context=".MainScreens.LoginScreen"
 >
 
-
     <TextView
             android:id="@+id/tv2"
             android:layout_width="wrap_content"
@@ -47,9 +46,12 @@
 
         <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email1"
+                android:background="@drawable/edit_text_bg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email"
+                android:drawableRight="@drawable/ic_email"
+                android:drawableTint="#615D5D"
                 android:inputType="textEmailAddress" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -64,6 +66,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password1"
+                android:background="@drawable/edit_text_bg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"

@@ -29,6 +29,11 @@ class CustomAdapter(private val mList: List<ItemsViewModel>) : RecyclerView.Adap
         // sets the image to the imageview from our itemHolder class
         holder.imageView.setImageResource(ItemsViewModel.image)
 
+//        //Images will work with glide
+//        Glide.with(context)
+//            .load(ItemsViewModel.image)
+//            .into(holder.imageView)
+
         // sets the text to the textview from our itemHolder class
         holder.textView.text = ItemsViewModel.text
 
@@ -45,3 +50,4 @@ class CustomAdapter(private val mList: List<ItemsViewModel>) : RecyclerView.Adap
         val textView: TextView = itemView.findViewById(R.id.textView)
     }
 }
+

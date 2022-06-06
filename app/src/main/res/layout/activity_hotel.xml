@@ -44,10 +44,9 @@
             android:layout_marginTop="10dp"/>
 
     <pl.droidsonroids.gif.GifImageView
-            android:id="@+id/cafeg"
+            android:id="@+id/hotelg"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/hotelg"
             android:layout_marginTop="-330dp"
     />
 
