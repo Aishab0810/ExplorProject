@@ -42,6 +42,9 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.ExploraHolic">
         <activity
+                android:name=".MapScreen.DisplayTrack"
+                android:exported="true"/>
+        <activity
                 android:name=".Dashboard.ui.custom.CustomActivity"
                 android:exported="true"/>
         <activity

@@ -6,6 +6,7 @@
             android:layout_height="match_parent"
             android:fillViewport="true"
             android:background="@drawable/regsc">
+
     <androidx.cardview.widget.CardView
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
@@ -17,7 +18,7 @@
             app:cardElevation="3dp"
             android:layout_margin="15dp"
             android:foreground="?selectableItemBackground"
-            android:id="@+id/Card_View"
+            android:id="@+id/Card_View1"
             android:background="@color/black"
             android:clickable="true">
 
@@ -41,9 +42,19 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:textAlignment="center"
                     android:textColor="#184695"
                     android:text="@string/Khadakwasla"/>
+
+            <ImageButton android:layout_width="40dp"
+                         android:layout_height="40dp"
+                         android:id="@+id/mapImg1"
+                         android:layout_marginTop="-30dp"
+                         android:layout_marginStart="320dp"
+                         android:layout_marginEnd="10dp"
+                         android:src="@drawable/map"
+                         android:backgroundTint="@color/blue"
+            />
+
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -78,8 +89,18 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:textAlignment="center"
                     android:text="@string/Mulashi"/>
+
+            <ImageButton android:layout_width="40dp"
+                         android:layout_height="40dp"
+                         android:id="@+id/mapImg2"
+                         android:layout_marginTop="-30dp"
+                         android:layout_marginStart="320dp"
+                         android:layout_marginEnd="10dp"
+                         android:src="@drawable/map"
+                         android:backgroundTint="@color/blue"
+            />
+
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
