@@ -54,6 +54,10 @@ class Info : AppCompatActivity() {
             startActivity(Intent(this, LoginScreen::class.java))
         }
 
+        val url =
+            "https://firebasestorage.googleapis.com/v0/b/exploraholic-a1daf.appspot.com/o/Gif's%2Froad-trip.gif?alt=media&token=c44f2d06-dfe4-40d5-8ba5-e8e7915a0cef"
+        Glide.with(applicationContext).load(url).into(iv11)
+
         val url1 =
             "https://firebasestorage.googleapis.com/v0/b/exploraholic-a1daf.appspot.com/o/wtrfl1.jpg?alt=media&token=d84ff509-be07-435c-8976-3889eb3b9b46" //Retrieved url as mentioned above
         Glide.with(applicationContext).load(url1).into(imageview8)

@@ -41,17 +41,7 @@
             android:roundIcon="@drawable/logoexp"
             android:supportsRtl="true"
             android:theme="@style/Theme.ExploraHolic">
-        <activity
-                android:name=".MapScreen.DisplayTrack"
-                android:exported="true"/>
-        <activity
-                android:name=".Dashboard.ui.custom.CustomActivity"
-                android:exported="true"/>
-        <activity
-                android:name=".Dashboard.navdrawer"
-                android:exported="true"
-                android:label="@string/title_activity_navdrawer"
-                android:theme="@style/Theme.ExploraHolic.NoActionBar"/>
+
         <activity
                 android:name=".MapScreen.MapWithSearchbar"
                 android:exported="true"/>

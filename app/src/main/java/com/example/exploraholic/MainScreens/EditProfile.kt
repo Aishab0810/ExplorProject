@@ -52,12 +52,9 @@ class EditProfile : AppCompatActivity() {
         binding = ActivityEditProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
         auth = FirebaseAuth.getInstance()
         val uid =  auth.currentUser?.uid
         databaseReference = FirebaseDatabase.getInstance().getReference("Users")
-
 
         binding.updatebtn.setOnClickListener {
             //here we get values of name,email,address and gender
@@ -70,11 +67,8 @@ class EditProfile : AppCompatActivity() {
             if(uid != null ){
 
                 databaseReference.child(uid).setValue(user).addOnCompleteListener {
-
                     if (it.isSuccessful){
-
                         uploadProfilePic()
-
                     }else{
                         hideProgressBar()
                         Toast.makeText(this@EditProfile,"Failed to update profile",Toast.LENGTH_SHORT).show()
@@ -82,12 +76,8 @@ class EditProfile : AppCompatActivity() {
 
 
                 }
-
             }
         }
-
-
-
         // register the UI widgets with their appropriate IDs
         bSelectImage = findViewById(com.example.exploraholic.R.id.BSelectImage)
         iVPreviewImage = findViewById(com.example.exploraholic.R.id.IVPreviewImage)
@@ -131,7 +121,6 @@ class EditProfile : AppCompatActivity() {
             hideProgressBar()
             Toast.makeText(this@EditProfile,"Failed to upload the image",Toast.LENGTH_SHORT).show()
         }
-
     }
 //
 //    fun getValues(view: View) {
@@ -165,8 +154,6 @@ class EditProfile : AppCompatActivity() {
     private fun hideProgressBar(){
         dialog.dismiss()
     }
-
-
 
     // this function is triggered when user
     // selects the image from the imageChooser

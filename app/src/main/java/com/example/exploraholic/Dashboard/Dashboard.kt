@@ -61,7 +61,7 @@ class Dashboard : AppCompatActivity(){
         dash = findViewById(R.id.go)
 
         val url =
-            "https://firebasestorage.googleapis.com/v0/b/exploraholic-a1daf.appspot.com/o/Gif's%2Froad-trip.gif?alt=media&token=c44f2d06-dfe4-40d5-8ba5-e8e7915a0cef"
+            "https://firebasestorage.googleapis.com/v0/b/exploraholic-a1daf.appspot.com/o/Gif's%2Fgo_explore.gif?alt=media&token=7e0afbb0-99c2-4d46-88ba-b2320c025b08"
         Glide.with(applicationContext).load(url).into(dash)
 
         val url1 =

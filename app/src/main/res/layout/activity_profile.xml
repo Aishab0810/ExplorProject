@@ -44,7 +44,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
             android:text="First Name"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="20dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -132,11 +132,11 @@
             app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
     <TextView
-            android:id="@+id/Dashboard"
+            android:id="@+id/dashboard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
-            android:layout_marginLeft="210dp"
+            android:gravity="center_horizontal"
             android:text="Go to Dashboard"
             android:textSize="20sp"
             android:textStyle="bold"

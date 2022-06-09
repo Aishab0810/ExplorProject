@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.provider.MediaStore.ACTION_IMAGE_CAPTURE
 import android.provider.Settings
 import android.view.Window
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -42,11 +43,19 @@ class Profile : AppCompatActivity() {
     private lateinit var storageReference: StorageReference
     private lateinit var imageUri : Uri
     private lateinit var dialog: Dialog
+    private lateinit var dashboardtxt : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        dashboardtxt = findViewById(R.id.dashboard)
+
+        dashboardtxt.setOnClickListener {
+            startActivity(Intent(this, Dashboard::class.java))
+            Toast.makeText(this@Profile, "Dashboard", Toast.LENGTH_SHORT).show()
+        }
 
         auth = FirebaseAuth.getInstance()
         val uid =  auth.currentUser?.uid
