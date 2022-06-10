@@ -123,6 +123,9 @@ dependencies {
     //firestore dependency
     implementation 'com.google.firebase:firebase-firestore:24.1.2'
 
+//    //google place auto complete
+//    implementation'com.google.android.libraries.places:places:2.6.0'
+
 }
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
