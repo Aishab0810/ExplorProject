@@ -50,6 +50,7 @@
                 android:background="@drawable/edit_text_bg"
                 android:textColorHint="@color/white"
                 android:hint="Email"
+                android:textColor="@color/white"
                 android:drawableRight="@drawable/ic_email"
                 android:drawableTint="@color/white"
                 android:inputType="textEmailAddress" />
@@ -73,6 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
+                android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:inputType="textPassword" />
 
@@ -83,7 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/password11"
-            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
             app:passwordToggleTint="@color/white"
             app:errorEnabled="true"
             app:passwordToggleEnabled="true">
@@ -94,6 +96,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Confirm Password"
+                android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:inputType="textPassword" />
 

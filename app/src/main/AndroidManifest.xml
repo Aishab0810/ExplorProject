@@ -41,7 +41,9 @@
             android:roundIcon="@drawable/logoexp"
             android:supportsRtl="true"
             android:theme="@style/Theme.ExploraHolic">
-
+        <activity
+                android:name=".convert_to_kotlin"
+                android:exported="true"/>
         <activity
                 android:name=".MapScreen.MapWithSearchbar"
                 android:exported="true"/>
