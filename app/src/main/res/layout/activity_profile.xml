@@ -125,6 +125,8 @@
             android:layout_marginHorizontal="80dp"
             android:layout_marginTop="30dp"
             android:text="Save"
+            android:textColor="#346A95"
+            android:backgroundTint="@color/white"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
